@@ -68,7 +68,7 @@
         <p>📧 <a href="mailto:{{ shared.email }}" style="color:#fff;">{{ shared.email }}</a></p>
         <p>📞 <a href="tel:{{ shared.phone_tel }}" style="color:#fff;">{{ shared.phone_display }}</a> {{ page.contact_info.whatsapp_note }}</p>
         <p>📍 {{ page.contact_info.location }}</p>
-        <p>🕘 {{ shared.hours }}</p>
+        <p>🕘 {{ content.hours }}</p>
         <p>{{ page.contact_info.mode }}</p>
       </div>
     </div>
@@ -213,8 +213,8 @@
           <ul class="contact-list">
             <li><span class="ci-icon">@</span><div><strong>{{ page.contact_info.email_label }}</strong><span><a href="mailto:{{ shared.email }}">{{ shared.email }}</a></span></div></li>
             <li><span class="ci-icon">☎</span><div><strong>{{ page.contact_info.phone_label }}</strong><span><a href="tel:{{ shared.phone_tel }}">{{ shared.phone_display }}</a></span></div></li>
-            <li><span class="ci-icon">📍</span><div><strong>{{ page.contact_info.location_label }}</strong><span>{{ shared.city }}</span></div></li>
-            <li><span class="ci-icon">🕘</span><div><strong>{{ page.contact_info.hours_label }}</strong><span>{{ shared.hours }}</span></div></li>
+            <li><span class="ci-icon">📍</span><div><strong>{{ page.contact_info.location_label }}</strong><span>{{ content.city }}</span></div></li>
+            <li><span class="ci-icon">🕘</span><div><strong>{{ page.contact_info.hours_label }}</strong><span>{{ content.hours }}</span></div></li>
           </ul>
         </div>
       </div>

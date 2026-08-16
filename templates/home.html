@@ -1,4 +1,28 @@
 {% extends "base.html" %}
+{% block extra_head %}
+{% if lang == 'es' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AAV Gestoría",
+  "image": "{{ shared.logo_url }}",
+  "url": "{{ shared.site_url }}",
+  "email": "{{ shared.email }}",
+  "telephone": "{{ shared.phone_tel }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ shared.street_address }}",
+    "postalCode": "{{ shared.postal_code }}",
+    "addressLocality": "{{ shared.address_locality }}",
+    "addressCountry": "{{ shared.address_country }}"
+  },
+  "areaServed": "ES",
+  "founder": { "@type": "Person", "name": "{{ shared.founder_name }}" }
+}
+</script>
+{% endif %}
+{% endblock %}
 {% block content %}
 
   <section class="hero">

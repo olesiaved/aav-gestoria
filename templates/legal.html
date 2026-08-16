@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="section">
+    <div class="container legal-doc">
+      <h1>{{ page.h1 }}</h1>
+      <p class="updated">{{ page.updated }}</p>
+
+      {% for block in page.blocks %}
+        {% if block.type == 'h2' %}
+          <h2>{{ block.text }}</h2>
+        {% elif block.type == 'p' %}
+          <p>{{ block.text | safe }}</p>
+        {% elif block.type == 'ul' %}
+          <ul>{% for item in block.entries %}<li>{{ item | safe }}</li>{% endfor %}</ul>
+        {% elif block.type == 'table' %}
+          <div class="table-wrap">
+            <table class="rates">
+              <thead><tr>{% for h in block.head %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+              <tbody>
+                {% for row in block.rows %}
+                <tr>{% for cell in row %}<td>{{ cell }}</td>{% endfor %}</tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% if block.note is defined and block.note %}<p class="small">{{ block.note }}</p>{% endif %}
+        {% elif block.type == 'note' %}
+          <div class="note-box" style="margin-top:2em;">{{ block.html | safe }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -47,7 +47,7 @@
       <span class="eyebrow">Contacto</span>
       <h1>Hablemos de su caso</h1>
       <p class="lead">Cuéntenos brevemente qué servicio necesita. Revisaremos su consulta y le indicaremos los siguientes pasos.</p>
-      <nav class="quick-menu" aria-label="Ir a sección">
+      <nav class="quick-menu" aria-label="Hablemos de su caso">
         <a href="#contacto-formulario">Formulario de contacto</a>
         <a href="#llamada-gratuita">Llamada inicial gratuita</a>
         <a href="#consulta">Consulta de pago (50 €/hora)</a>
@@ -67,24 +67,24 @@
           <div class="form-grid">
             <div class="field">
               <label for="c-nombre">Nombre y apellidos *</label>
-              <input type="text" id="c-nombre" name="Nombre y apellidos" required>
+              <input type="text" id="c-nombre" name="full_name" required>
             </div>
             <div class="field">
               <label for="c-empresa">Empresa <span class="hint" style="display:inline;">(si aplica)</span></label>
-              <input type="text" id="c-empresa" name="Empresa">
+              <input type="text" id="c-empresa" name="company">
             </div>
             <div class="field">
               <label for="c-email">Correo electrónico *</label>
-              <input type="email" id="c-email" name="Correo electrónico" required>
+              <input type="email" id="c-email" name="email" required>
             </div>
             <div class="field">
               <label for="c-tel">Teléfono <span class="hint" style="display:inline;">(opcional)</span></label>
-              <input type="tel" id="c-tel" name="Teléfono">
+              <input type="tel" id="c-tel" name="phone">
             </div>
             <div class="field field--full">
               <label for="c-tipo">Tipo de consulta *</label>
-              <select id="c-tipo" name="Tipo de consulta" required>
-                <option value="">Seleccione una opción</option>
+              <select id="c-tipo" name="consult_type" required>
+                <option value="">—</option>
                 <option>Contabilidad y fiscalidad para empresas</option>
                 <option>Gestión laboral</option>
                 <option>Declaración de la Renta</option>
@@ -97,12 +97,12 @@
             </div>
             <div class="field field--full">
               <label for="c-mensaje">Mensaje *</label>
-              <textarea id="c-mensaje" name="Mensaje" required></textarea>
+              <textarea id="c-mensaje" name="message" required></textarea>
             </div>
           </div>
           <div class="checkbox-field">
-            <input type="checkbox" id="c-privacidad" name="Acepta Política de Privacidad" required>
-            <label for="c-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>. *</label>
+            <input type="checkbox" id="c-privacidad" name="privacy_consent" required>
+            <label for="c-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>.</label>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
           <div class="form-msg" role="status"></div>
@@ -120,7 +120,7 @@
     </div>
   </section>
 
-  <!-- Free 15-min call -->
+  <!-- Free call -->
   <section class="section section--alt" id="llamada-gratuita">
     <div class="container split">
       <div class="form-card">
@@ -130,20 +130,20 @@
         <form data-ajax-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
               data-success="Gracias. Ahora seleccione fecha y hora en el calendario para confirmar la llamada."
               data-error="No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.">
-          <input type="hidden" name="form_name" value="Llamada inicial gratuita">
+          <input type="hidden" name="form_name" value="Llamada inicial de 15 minutos">
           <div class="form-grid">
             <div class="field">
               <label for="lg-nombre">Nombre y apellidos *</label>
-              <input type="text" id="lg-nombre" name="Nombre y apellidos" required>
+              <input type="text" id="lg-nombre" name="full_name" required>
             </div>
             <div class="field">
               <label for="lg-email">Correo electrónico *</label>
-              <input type="email" id="lg-email" name="Correo electrónico" required>
+              <input type="email" id="lg-email" name="email" required>
             </div>
             <div class="field field--full">
               <label for="lg-tipo">Tipo de consulta *</label>
-              <select id="lg-tipo" name="Tipo de consulta" required>
-                <option value="">Seleccione una opción</option>
+              <select id="lg-tipo" name="consult_type" required>
+                <option value="">—</option>
                 <option>Contabilidad y fiscalidad para empresas</option>
                 <option>Gestión laboral</option>
                 <option>Declaración de la Renta</option>
@@ -154,12 +154,12 @@
             </div>
             <div class="field field--full">
               <label for="lg-motivo">Describa brevemente el motivo de la consulta *</label>
-              <textarea id="lg-motivo" name="Motivo de la consulta" required></textarea>
+              <textarea id="lg-motivo" name="reason" required></textarea>
             </div>
           </div>
           <div class="checkbox-field">
-            <input type="checkbox" id="lg-privacidad" name="Acepta Política de Privacidad" required>
-            <label for="lg-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>. *</label>
+            <input type="checkbox" id="lg-privacidad" name="privacy_consent" required>
+            <label for="lg-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>.</label>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Enviar datos</button>
           <div class="form-msg" role="status"></div>
@@ -169,7 +169,7 @@
       <div class="booking-panel">
         <h3>Reserve su llamada</h3>
         <p>Después de enviar sus datos, elija el día y la hora que mejor le convengan.</p>
-        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&amp;ismsaljsauthenabled&amp;ep=plink">Seleccionar fecha y hora</a>
+        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&ismsaljsauthenabled&ep=plink">Seleccionar fecha y hora</a>
         <small>Al reservar una cita será redirigido a Microsoft Bookings, servicio externo sujeto a sus propias condiciones y política de privacidad.</small>
       </div>
     </div>
@@ -185,44 +185,44 @@
         <form data-ajax-form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
               data-success="Gracias. Ahora seleccione fecha y hora. Recibirá las instrucciones de pago por correo electrónico."
               data-error="No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.">
-          <input type="hidden" name="form_name" value="Consulta de pago (50 €/hora)">
+          <input type="hidden" name="form_name" value="Solicitar una consulta">
           <div class="form-grid">
             <div class="field">
               <label for="cs-nombre">Nombre y apellidos / Razón social *</label>
-              <input type="text" id="cs-nombre" name="Nombre y apellidos o razón social" required>
+              <input type="text" id="cs-nombre" name="billing_name" required>
             </div>
             <div class="field">
               <label for="cs-tipo-factura">¿La factura se emitirá a un particular o a una empresa? *</label>
-              <select id="cs-tipo-factura" name="Factura a particular o empresa" required>
-                <option value="">Seleccione una opción</option>
+              <select id="cs-tipo-factura" name="billing_type" required>
+                <option value="">—</option>
                 <option>Particular</option>
                 <option>Empresa</option>
               </select>
             </div>
             <div class="field">
               <label for="cs-nif">DNI, NIE, NIF o CIF *</label>
-              <input type="text" id="cs-nif" name="DNI, NIE, NIF o CIF" required>
+              <input type="text" id="cs-nif" name="tax_id" required>
             </div>
             <div class="field">
               <label for="cs-direccion">Dirección fiscal *</label>
-              <input type="text" id="cs-direccion" name="Dirección fiscal" required>
+              <input type="text" id="cs-direccion" name="fiscal_address" required>
             </div>
             <div class="field">
               <label for="cs-email">Correo electrónico *</label>
-              <input type="email" id="cs-email" name="Correo electrónico" required>
+              <input type="email" id="cs-email" name="email" required>
             </div>
             <div class="field">
               <label for="cs-tel">Teléfono *</label>
-              <input type="tel" id="cs-tel" name="Teléfono" required>
+              <input type="tel" id="cs-tel" name="phone" required>
             </div>
             <div class="field">
               <label for="cs-pais">País de residencia fiscal <span class="hint" style="display:inline;">(cuando proceda)</span></label>
-              <input type="text" id="cs-pais" name="País de residencia fiscal">
+              <input type="text" id="cs-pais" name="country">
             </div>
             <div class="field">
               <label for="cs-tipo">Motivo de la consulta *</label>
-              <select id="cs-tipo" name="Tipo de consulta" required>
-                <option value="">Seleccione una opción</option>
+              <select id="cs-tipo" name="consult_type" required>
+                <option value="">—</option>
                 <option>Contabilidad y fiscalidad para empresas</option>
                 <option>Gestión laboral</option>
                 <option>Declaración de la Renta</option>
@@ -235,12 +235,12 @@
             </div>
             <div class="field field--full">
               <label for="cs-motivo">Describa brevemente el motivo de la consulta *</label>
-              <textarea id="cs-motivo" name="Descripción del motivo de la consulta" required></textarea>
+              <textarea id="cs-motivo" name="reason" required></textarea>
             </div>
           </div>
           <div class="checkbox-field">
-            <input type="checkbox" id="cs-privacidad" name="Acepta Política de Privacidad" required>
-            <label for="cs-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>. *</label>
+            <input type="checkbox" id="cs-privacidad" name="privacy_consent" required>
+            <label for="cs-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>.</label>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Enviar datos</button>
           <div class="form-msg" role="status"></div>
@@ -250,7 +250,7 @@
       <div class="booking-panel">
         <h3>Reserve su consulta</h3>
         <p>Después de enviar sus datos, elija el día y la hora. La cita se confirmará una vez recibido el pago.</p>
-        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&amp;ismsaljsauthenabled&amp;ep=plink">Seleccionar fecha y hora</a>
+        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&ismsaljsauthenabled&ep=plink">Seleccionar fecha y hora</a>
         <small>Tras realizar la reserva, recibirá por correo electrónico las instrucciones de pago. La cita se confirmará una vez recibido el pago.</small>
       </div>
     </div>
@@ -285,7 +285,7 @@
           <img src="img/logo.png" alt="AAV Gestoría" width="40" height="45">
           <span class="brand__text"><span class="brand__name">AAV Gestoría</span></span>
         </a>
-        <p style="max-width:38ch;">Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia. Gestión contable, fiscal y laboral 100&nbsp;% online.</p>
+        <p style="max-width:38ch;">Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia. Gestión contable, fiscal y laboral 100 % online.</p>
       </div>
       <div>
         <h4>Navegación</h4>
