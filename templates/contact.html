@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ page.eyebrow }}</span>
+      <h1>{{ page.h1 }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+      <nav class="quick-menu" aria-label="{{ page.h1 }}">
+        {% for item in page.quick_menu %}
+        <a href="#{{ item.anchor }}">{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  <!-- General contact form -->
+  <section class="section" id="contacto-formulario">
+    <div class="container split">
+      <div class="form-card">
+        <h2 class="mt-0">{{ page.general.h2 }}</h2>
+        <form data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+              data-success="{{ page.general.success }}"
+              data-error="{{ page.general.error }}">
+          <input type="hidden" name="form_name" value="{{ page.general.h2 }}">
+          <div class="form-grid">
+            <div class="field">
+              <label for="c-nombre">{{ page.general.labels.full_name }} *</label>
+              <input type="text" id="c-nombre" name="full_name" required>
+            </div>
+            <div class="field">
+              <label for="c-empresa">{{ page.general.labels.company }} <span class="hint" style="display:inline;">{{ page.general.labels.company_hint }}</span></label>
+              <input type="text" id="c-empresa" name="company">
+            </div>
+            <div class="field">
+              <label for="c-email">{{ page.general.labels.email }} *</label>
+              <input type="email" id="c-email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="c-tel">{{ page.general.labels.phone }} <span class="hint" style="display:inline;">{{ page.general.labels.phone_hint }}</span></label>
+              <input type="tel" id="c-tel" name="phone">
+            </div>
+            <div class="field field--full">
+              <label for="c-tipo">{{ page.general.labels.consult_type }} *</label>
+              <select id="c-tipo" name="consult_type" required>
+                <option value="">—</option>
+                {% for opt in page.general.tipo_options %}
+                <option>{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="c-mensaje">{{ page.general.labels.message }} *</label>
+              <textarea id="c-mensaje" name="message" required></textarea>
+            </div>
+          </div>
+          <div class="checkbox-field">
+            <input type="checkbox" id="c-privacidad" name="privacy_consent" required>
+            <label for="c-privacidad">{{ page.general.labels.privacy_pre }} <a href="{{ url_for('legal_privacidad') }}" target="_blank">{{ page.general.labels.privacy_link_text }}</a>{{ page.general.labels.privacy_post }}</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">{{ page.general.labels.submit }}</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+
+      <div class="booking-panel">
+        <h3>{{ page.contact_info.h3 }}</h3>
+        <p>📧 <a href="mailto:{{ shared.email }}" style="color:#fff;">{{ shared.email }}</a></p>
+        <p>📞 <a href="tel:{{ shared.phone_tel }}" style="color:#fff;">{{ shared.phone_display }}</a> {{ page.contact_info.whatsapp_note }}</p>
+        <p>📍 {{ page.contact_info.location }}</p>
+        <p>🕘 {{ shared.hours }}</p>
+        <p>{{ page.contact_info.mode }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free call -->
+  <section class="section section--alt" id="llamada-gratuita">
+    <div class="container split">
+      <div class="form-card">
+        <span class="badge badge--free">{{ page.llamada.badge }}</span>
+        <h2>{{ page.llamada.h2 }}</h2>
+        <p class="subtitle">{{ page.llamada.subtitle }}</p>
+        <form data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+              data-success="{{ page.llamada.success }}"
+              data-error="{{ page.llamada.error }}">
+          <input type="hidden" name="form_name" value="{{ page.llamada.h2 }}">
+          <div class="form-grid">
+            <div class="field">
+              <label for="lg-nombre">{{ page.llamada.labels.full_name }} *</label>
+              <input type="text" id="lg-nombre" name="full_name" required>
+            </div>
+            <div class="field">
+              <label for="lg-email">{{ page.llamada.labels.email }} *</label>
+              <input type="email" id="lg-email" name="email" required>
+            </div>
+            <div class="field field--full">
+              <label for="lg-tipo">{{ page.llamada.labels.consult_type }} *</label>
+              <select id="lg-tipo" name="consult_type" required>
+                <option value="">—</option>
+                {% for opt in page.llamada.tipo_options %}
+                <option>{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="lg-motivo">{{ page.llamada.labels.motivo }} *</label>
+              <textarea id="lg-motivo" name="reason" required></textarea>
+            </div>
+          </div>
+          <div class="checkbox-field">
+            <input type="checkbox" id="lg-privacidad" name="privacy_consent" required>
+            <label for="lg-privacidad">{{ page.llamada.labels.privacy_pre }} <a href="{{ url_for('legal_privacidad') }}" target="_blank">{{ page.llamada.labels.privacy_link_text }}</a>{{ page.llamada.labels.privacy_post }}</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">{{ page.llamada.labels.submit }}</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+
+      <div class="booking-panel">
+        <h3>{{ page.llamada.booking.h3 }}</h3>
+        <p>{{ page.llamada.booking.p }}</p>
+        <a class="btn btn-primary btn-block" data-booking-link href="{{ shared.booking_url }}">{{ page.llamada.booking.btn }}</a>
+        <small>{{ page.llamada.booking.note }}</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paid consultation -->
+  <section class="section" id="consulta">
+    <div class="container split">
+      <div class="form-card">
+        <span class="badge">{{ page.consulta.badge }}</span>
+        <h2>{{ page.consulta.h2 }}</h2>
+        <p class="subtitle">{{ page.consulta.subtitle }}</p>
+        <form data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+              data-success="{{ page.consulta.success }}"
+              data-error="{{ page.consulta.error }}">
+          <input type="hidden" name="form_name" value="{{ page.consulta.h2 }}">
+          <div class="form-grid">
+            <div class="field">
+              <label for="cs-nombre">{{ page.consulta.labels.full_name }} *</label>
+              <input type="text" id="cs-nombre" name="billing_name" required>
+            </div>
+            <div class="field">
+              <label for="cs-tipo-factura">{{ page.consulta.labels.billing_type }} *</label>
+              <select id="cs-tipo-factura" name="billing_type" required>
+                <option value="">—</option>
+                <option>{{ page.consulta.labels.billing_type_options[0] }}</option>
+                <option>{{ page.consulta.labels.billing_type_options[1] }}</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cs-nif">{{ page.consulta.labels.tax_id }} *</label>
+              <input type="text" id="cs-nif" name="tax_id" required>
+            </div>
+            <div class="field">
+              <label for="cs-direccion">{{ page.consulta.labels.fiscal_address }} *</label>
+              <input type="text" id="cs-direccion" name="fiscal_address" required>
+            </div>
+            <div class="field">
+              <label for="cs-email">{{ page.consulta.labels.email }} *</label>
+              <input type="email" id="cs-email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="cs-tel">{{ page.consulta.labels.phone }} *</label>
+              <input type="tel" id="cs-tel" name="phone" required>
+            </div>
+            <div class="field">
+              <label for="cs-pais">{{ page.consulta.labels.country }} <span class="hint" style="display:inline;">{{ page.consulta.labels.country_hint }}</span></label>
+              <input type="text" id="cs-pais" name="country">
+            </div>
+            <div class="field">
+              <label for="cs-tipo">{{ page.consulta.labels.consult_type }} *</label>
+              <select id="cs-tipo" name="consult_type" required>
+                <option value="">—</option>
+                {% for opt in page.consulta.tipo_options %}
+                <option>{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="cs-motivo">{{ page.consulta.labels.motivo }} *</label>
+              <textarea id="cs-motivo" name="reason" required></textarea>
+            </div>
+          </div>
+          <div class="checkbox-field">
+            <input type="checkbox" id="cs-privacidad" name="privacy_consent" required>
+            <label for="cs-privacidad">{{ page.consulta.labels.privacy_pre }} <a href="{{ url_for('legal_privacidad') }}" target="_blank">{{ page.consulta.labels.privacy_link_text }}</a>{{ page.consulta.labels.privacy_post }}</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">{{ page.consulta.labels.submit }}</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+
+      <div class="booking-panel">
+        <h3>{{ page.consulta.booking.h3 }}</h3>
+        <p>{{ page.consulta.booking.p }}</p>
+        <a class="btn btn-primary btn-block" data-booking-link href="{{ shared.booking_url }}">{{ page.consulta.booking.btn }}</a>
+        <small>{{ page.consulta.booking.note }}</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h2>{{ page.presencial.h2 }}</h2>
+          <p>{{ page.presencial.p }}</p>
+        </div>
+        <div>
+          <ul class="contact-list">
+            <li><span class="ci-icon">@</span><div><strong>{{ page.contact_info.email_label }}</strong><span><a href="mailto:{{ shared.email }}">{{ shared.email }}</a></span></div></li>
+            <li><span class="ci-icon">☎</span><div><strong>{{ page.contact_info.phone_label }}</strong><span><a href="tel:{{ shared.phone_tel }}">{{ shared.phone_display }}</a></span></div></li>
+            <li><span class="ci-icon">📍</span><div><strong>{{ page.contact_info.location_label }}</strong><span>{{ shared.city }}</span></div></li>
+            <li><span class="ci-icon">🕘</span><div><strong>{{ page.contact_info.hours_label }}</strong><span>{{ shared.hours }}</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

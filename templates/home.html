@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="hero">
+    <div class="container">
+      <h1>{{ page.hero.h1 }}</h1>
+      <p class="lead">{{ page.hero.lead1 }}</p>
+      <p class="lead">{{ page.hero.lead2 }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ url_for('contact') }}#llamada-gratuita">{{ page.hero.btn_freecall }}</a>
+        <a class="btn btn-outline" href="{{ url_for('contact') }}#consulta">{{ page.hero.btn_consult }}</a>
+        <a class="btn btn-outline" href="{{ url_for('services') }}">{{ page.hero.btn_services }}</a>
+      </div>
+      <p class="hero-note">{{ page.hero.note }}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">{{ page.services_section.eyebrow }}</span>
+      <h2>{{ page.services_section.h2 }}</h2>
+      <div class="card-grid">
+        {% for card in page.services_section.cards %}
+        <article class="card">
+          <div class="card-icon">{{ "%02d"|format(loop.index) }}</div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.desc }}</p>
+          <a class="btn btn-ghost" href="{{ url_for('services') }}#{{ card.anchor }}">{{ card.btn }}</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <span class="eyebrow">{{ page.why_section.eyebrow }}</span>
+      <h2>{{ page.why_section.h2 }}</h2>
+      <div class="card-grid">
+        {% for card in page.why_section.cards %}
+        <article class="card">
+          <div class="card-icon">{{ card.icon }}</div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.desc }}</p>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">{{ page.featured.eyebrow }}</span>
+      <h2>{{ page.featured.h2 }}</h2>
+      <p class="lead">{{ page.featured.lead }}</p>
+
+      <div class="resource-card" style="margin-top:24px;">
+        <div class="resource-card__icon">PDF</div>
+        <div>
+          <span class="badge badge--free">{{ page.featured.free.badge }}</span>
+          <h3 style="margin-bottom:4px;">{{ page.featured.free.title }}</h3>
+          <p class="subtitle" style="margin:0;">{{ page.featured.free.desc }}</p>
+        </div>
+        <div class="resource-card__actions">
+          <a class="btn btn-navy btn-sm" href="{{ url_for('about') }}">{{ page.featured.free.btn_read }}</a>
+          <a class="btn btn-primary btn-sm" href="{{ asset('files/fiscalidad-activos-en-el-extranjero.pdf') }}" download>{{ page.featured.free.btn_download }}</a>
+        </div>
+      </div>
+
+      <div class="resource-card resource-card--premium" style="margin-top:16px;">
+        <div class="resource-card__icon">PDF+</div>
+        <div>
+          <span class="badge">{{ page.featured.premium.badge }}</span>
+          <h3 style="margin-bottom:4px;">{{ page.featured.premium.title }}</h3>
+          <p class="subtitle" style="margin:0;">{{ page.featured.premium.desc }}</p>
+        </div>
+        <div class="resource-card__actions">
+          <span class="price-tag">{{ page.featured.premium.price }}</span>
+          <button class="btn btn-ghost btn-sm is-disabled" disabled>{{ page.featured.premium.btn }}</button>
+        </div>
+      </div>
+
+      <div class="cta-band" style="margin-top:40px;">
+        <h2>{{ page.featured.cta.h2 }}</h2>
+        <p>{{ page.featured.cta.p }}</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="{{ url_for('contact') }}#consulta">{{ page.featured.cta.btn }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

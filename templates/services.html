@@ -1,0 +1,154 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">{{ page.eyebrow }}</span>
+      <h1>{{ page.h1 }}</h1>
+      <p class="lead">{{ page.lead }}</p>
+      <nav class="quick-menu" aria-label="{{ page.h1 }}">
+        {% for item in page.quick_menu %}
+        <a href="#{{ item.anchor }}">{{ item.label }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </section>
+
+  <section class="section" id="empresas">
+    <div class="container">
+      <span class="eyebrow">{{ page.s1.eyebrow }}</span>
+      <h2>{{ page.s1.h2 }}</h2>
+      <div class="pricing-grid">
+        {% for plan in page.s1.plans %}
+        <div class="price-card{% if plan.featured %} price-card--featured{% endif %}">
+          <h3>{{ plan.name }}</h3>
+          <div class="price-card__price">{{ plan.price }}</div>
+          <p>{{ plan.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="suplementos">
+    <div class="container">
+      <h2>{{ page.s2.h2 }}</h2>
+      <p class="subtitle">{{ page.s2.subtitle }}</p>
+      <div class="table-wrap">
+        <table class="rates">
+          <thead><tr><th>{{ page.s2.table_head[0] }}</th><th>{{ page.s2.table_head[1] }}</th></tr></thead>
+          <tbody>
+            {% for row in page.s2.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">{{ page.s2.note }}</div>
+    </div>
+  </section>
+
+  <section class="section" id="fiscales-puntuales">
+    <div class="container">
+      <h2>{{ page.s3.h2 }}</h2>
+      <div class="table-wrap">
+        <table class="rates">
+          <thead><tr><th>{{ page.s3.table_head[0] }}</th><th>{{ page.s3.table_head[1] }}</th></tr></thead>
+          <tbody>
+            {% for row in page.s3.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">
+        <p style="margin-bottom:10px;">{{ page.s3.note1 }}</p>
+        <p style="margin:0;">{{ page.s3.note2 }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="laboral">
+    <div class="container">
+      <span class="eyebrow">{{ page.s4.eyebrow }}</span>
+      <h2>{{ page.s4.h2 }}</h2>
+      <div class="pricing-grid" style="grid-template-columns:1fr;">
+        <div class="price-card" style="max-width:640px;">
+          <h3>{{ page.s4.name }}</h3>
+          <div class="price-card__price">{{ page.s4.price }}</div>
+          <p>{{ page.s4.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="laboral-puntuales">
+    <div class="container">
+      <h2>{{ page.s5.h2 }}</h2>
+      <div class="table-wrap">
+        <table class="rates">
+          <thead><tr><th>{{ page.s5.table_head[0] }}</th><th>{{ page.s5.table_head[1] }}</th></tr></thead>
+          <tbody>
+            {% for row in page.s5.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">{{ page.s5.note }}</div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="renta">
+    <div class="container">
+      <span class="eyebrow">{{ page.s6.eyebrow }}</span>
+      <h2>{{ page.s6.h2 }}</h2>
+      <div class="pricing-grid">
+        {% for plan in page.s6.plans %}
+        <div class="price-card{% if plan.featured %} price-card--featured{% endif %}">
+          <h3>{{ plan.name }}</h3>
+          <div class="price-card__price">{{ plan.price }}</div>
+          <p>{{ plan.desc }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="modelos">
+    <div class="container">
+      <h2>{{ page.s7.h2 }}</h2>
+      <div class="table-wrap">
+        <table class="rates">
+          <thead><tr><th>{{ page.s7.table_head[0] }}</th><th>{{ page.s7.table_head[1] }}</th></tr></thead>
+          <tbody>
+            {% for row in page.s7.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box">{{ page.s7.note }}</div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>{{ page.conditions.h2 }}</h2>
+      <ul>
+        {% for item in page.conditions.items %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <div class="cta-band">
+        <h2>{{ page.cta.h2 }}</h2>
+        <p>{{ page.cta.p }}</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="{{ url_for('contact') }}#llamada-gratuita">{{ page.cta.btn1 }}</a>
+          <a class="btn btn-outline" href="{{ url_for('contact') }}">{{ page.cta.btn2 }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
