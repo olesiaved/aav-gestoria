@@ -183,6 +183,25 @@
     });
   });
 
+  /* ---------- PDF download tracking (Formspree) ---------- */
+  document.querySelectorAll("[data-track-download]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      var endpoint = link.getAttribute("data-track-download");
+      if (!endpoint || endpoint.indexOf("YOUR_FORM_ID") !== -1) return;
+      var payload = new FormData();
+      payload.append("form_name", "PDF descargado");
+      payload.append("file", link.getAttribute("data-track-file") || link.href);
+      payload.append("page_url", window.location.href);
+      payload.append("timestamp", new Date().toISOString());
+      fetch(endpoint, {
+        method: "POST",
+        body: payload,
+        headers: { Accept: "application/json" },
+        keepalive: true
+      }).catch(function () { /* tracking is best-effort */ });
+    });
+  });
+
   /* ---------- Booking link outbound note ---------- */
   document.querySelectorAll("[data-booking-link]").forEach(function (link) {
     link.setAttribute("target", "_blank");
