@@ -383,11 +383,14 @@ table.rates tr:last-child td { border-bottom: none; }
 
 .profile-photo {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius);
+  border: 6px solid var(--navy);
   box-shadow: var(--shadow-lg);
+  box-sizing: border-box;
   display: block;
   margin: 0 auto;
 }
