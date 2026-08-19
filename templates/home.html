@@ -86,7 +86,8 @@
           <p class="subtitle" style="margin:0;">{{ page.featured.free.desc }}</p>
         </div>
         <div class="resource-card__actions">
-          <a class="btn btn-primary btn-sm" href="{{ asset('files/fiscalidad-activos-en-el-extranjero.pdf') }}" download>{{ page.featured.free.btn_download }}</a>
+          <a class="btn btn-primary btn-sm" href="{{ asset('files/fiscalidad-activos-en-el-extranjero.pdf') }}" download
+             data-track-download="{{ shared.form_endpoint }}" data-track-file="fiscalidad-activos-en-el-extranjero.pdf">{{ page.featured.free.btn_download }}</a>
         </div>
       </div>
 
