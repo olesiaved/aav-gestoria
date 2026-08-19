@@ -32,9 +32,18 @@
   "cookie_modal": {
     "title": "Configuración de cookies",
     "intro": "Actualmente este sitio web utiliza únicamente cookies técnicas necesarias. Si en el futuro se incorporan cookies de preferencias o analíticas, podrá activarlas o desactivarlas aquí.",
-    "cat_necessary": {"title": "Cookies técnicas necesarias", "desc": "Imprescindibles para el funcionamiento del sitio (por ejemplo, recordar su elección de cookies). No se pueden desactivar."},
-    "cat_preferences": {"title": "Cookies de preferencias", "desc": "Permiten recordar opciones como el idioma seleccionado."},
-    "cat_analytics": {"title": "Cookies de análisis", "desc": "Solo se activarían si en el futuro se instala una herramienta de estadísticas. Actualmente no se utilizan."},
+    "cat_necessary": {
+      "title": "Cookies técnicas necesarias",
+      "desc": "Imprescindibles para el funcionamiento del sitio (por ejemplo, recordar su elección de cookies). No se pueden desactivar."
+    },
+    "cat_preferences": {
+      "title": "Cookies de preferencias",
+      "desc": "Permiten recordar opciones como el idioma seleccionado."
+    },
+    "cat_analytics": {
+      "title": "Cookies de análisis",
+      "desc": "Solo se activarían si en el futuro se instala una herramienta de estadísticas. Actualmente no se utilizan."
+    },
     "save": "Guardar selección",
     "reject": "Rechazar todas",
     "accept": "Aceptar todas",
@@ -57,24 +66,51 @@
         "eyebrow": "Áreas principales",
         "h2": "Nuestros servicios",
         "cards": [
-          {"title": "Contabilidad y fiscalidad para empresas", "desc": "Gestión contable, declaraciones tributarias, Impuesto sobre Sociedades, cierre del ejercicio, libros contables y cuentas anuales.", "btn": "Ver servicios para empresas", "anchor": "empresas"},
-          {"title": "Gestión laboral", "desc": "Nóminas, seguros sociales, contratos, altas, bajas, certificados e incidencias laborales.", "btn": "Ver servicios laborales", "anchor": "laboral"},
-          {"title": "Renta y fiscalidad para particulares", "desc": "Declaración de la Renta, inmuebles, inversiones, rentas internacionales y modelos 720 y 721.", "btn": "Ver servicios fiscales para particulares", "anchor": "renta"}
+          {
+            "title": "Contabilidad y fiscalidad para empresas",
+            "desc": "Gestión contable, declaraciones tributarias, Impuesto sobre Sociedades, cierre del ejercicio, libros contables y cuentas anuales.",
+            "btn": "Ver servicios para empresas",
+            "anchor": "empresas"
+          },
+          {
+            "title": "Gestión laboral",
+            "desc": "Nóminas, seguros sociales, contratos, altas, bajas, certificados e incidencias laborales.",
+            "btn": "Ver servicios laborales",
+            "anchor": "laboral"
+          },
+          {
+            "title": "Renta y fiscalidad para particulares",
+            "desc": "Declaración de la Renta, inmuebles, inversiones, rentas internacionales y modelos 720 y 721.",
+            "btn": "Ver servicios fiscales para particulares",
+            "anchor": "renta"
+          }
         ]
       },
       "why_section": {
         "eyebrow": "Por qué trabajar conmigo",
         "h2": "Gestión online, profesional y flexible",
         "cards": [
-          {"icon": "💻", "title": "100 % online", "desc": "Gestión de documentación, consultas, videollamadas y seguimiento a través de canales digitales, sin desplazamientos innecesarios."},
-          {"icon": "🎓", "title": "Tramitación profesional y oficial", "desc": "Servicio prestado por Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia."},
-          {"icon": "🤝", "title": "Atención flexible", "desc": "Atención online y reuniones presenciales con cita previa cuando resulte necesario."}
+          {
+            "icon": "💻",
+            "title": "100 % online",
+            "desc": "Gestión de documentación, consultas, videollamadas y seguimiento a través de canales digitales, sin desplazamientos innecesarios."
+          },
+          {
+            "icon": "🎓",
+            "title": "Tramitación profesional y oficial",
+            "desc": "Servicio prestado por Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia."
+          },
+          {
+            "icon": "🤝",
+            "title": "Atención flexible",
+            "desc": "Atención online y reuniones presenciales con cita previa cuando resulte necesario."
+          }
         ]
       },
       "featured": {
-        "eyebrow": "Análisis destacado",
-        "h2": "Fiscalidad de activos e inversiones en el extranjero",
-        "lead": "Una introducción práctica a las principales obligaciones fiscales e informativas aplicables a los residentes fiscales en España.",
+        "eyebrow": "Contenido experto · AAV GESTORÍA",
+        "h2": "Bienes y rentas en el extranjero",
+        "lead": "Guía práctica sobre obligaciones fiscales e informativas en España.",
         "free": {
           "badge": "Descarga gratuita",
           "title": "Resumen para el contribuyente",
@@ -82,16 +118,9 @@
           "btn_read": "Leer el resumen",
           "btn_download": "Descargar presentación en PDF"
         },
-        "premium": {
-          "badge": "Guía ampliada",
-          "title": "Guía fiscal internacional completa",
-          "desc": "Versión ampliada con casos prácticos, convenios de doble imposición y una checklist de cumplimiento para Modelos 720/721. Próximamente disponible como descarga de pago.",
-          "price": "[Precio pendiente]",
-          "btn": "Comprar y descargar (próximamente)"
-        },
         "cta": {
-          "h2": "¿Tiene dudas sobre la tributación de sus activos o inversiones?",
-          "p": "Solicite una consulta individual y reciba una respuesta adaptada a su caso.",
+          "h2": "¿Tiene dudas sobre bienes, inversiones o rentas en el extranjero?",
+          "p": "Podemos revisar su caso y las obligaciones fiscales e informativas aplicables.",
           "btn": "Solicitar una consulta"
         }
       }
@@ -103,52 +132,151 @@
       "h1": "Servicios y tarifas",
       "lead": "Soluciones contables, fiscales y laborales para empresas y particulares, con un alcance claramente definido y precios orientativos.",
       "quick_menu": [
-        {"anchor": "empresas", "label": "Planes mensuales para empresas"},
-        {"anchor": "suplementos", "label": "Ampliaciones y suplementos"},
-        {"anchor": "fiscales-puntuales", "label": "Servicios fiscales puntuales"},
-        {"anchor": "laboral", "label": "Gestión laboral mensual"},
-        {"anchor": "laboral-puntuales", "label": "Servicios laborales puntuales"},
-        {"anchor": "renta", "label": "Declaración de la Renta"},
-        {"anchor": "modelos", "label": "Modelos y actuaciones adicionales"}
+        [
+          {
+            "anchor": "empresas",
+            "label": "Planes mensuales para empresas"
+          },
+          {
+            "anchor": "suplementos",
+            "label": "Ampliaciones y suplementos"
+          },
+          {
+            "anchor": "fiscales-puntuales",
+            "label": "Servicios fiscales puntuales"
+          }
+        ],
+        [
+          {
+            "anchor": "laboral",
+            "label": "Gestión laboral mensual"
+          },
+          {
+            "anchor": "laboral-puntuales",
+            "label": "Servicios laborales puntuales"
+          }
+        ],
+        [
+          {
+            "anchor": "renta",
+            "label": "Declaración de la Renta"
+          },
+          {
+            "anchor": "modelos",
+            "label": "Modelos y actuaciones adicionales"
+          }
+        ]
       ],
       "s1": {
         "eyebrow": "Servicios para empresas",
         "h2": "1. Planes mensuales de gestión contable y fiscal",
         "plans": [
-          {"name": "Empresa Esencial", "price": "150 € + IVA/mes", "desc": "Contabilidad de hasta 40 documentos mensuales; una cuenta bancaria; declaraciones tributarias trimestrales y anuales; Impuesto sobre Sociedades; cierre contable y fiscal; legalización de libros; formulación y depósito de cuentas anuales; consultas ordinarias.", "featured": false},
-          {"name": "Empresa Profesional", "price": "190 € + IVA/mes", "desc": "Contabilidad de hasta 100 documentos mensuales; gestión de hasta tres cuentas bancarias; conciliación bancaria mensual; operaciones intracomunitarias ordinarias; ventas online a través de una única tienda propia, sin marketplaces ni regímenes especiales de IVA; control de saldos de clientes y proveedores; gestión de amortizaciones; informe trimestral de resultados; consultas con la dirección; cumplimiento de todas las obligaciones anuales.", "featured": true},
-          {"name": "Empresa Integral", "price": "Desde 250 € + IVA/mes", "desc": "Contabilidad de hasta 200 documentos mensuales; gestión de hasta cinco cuentas bancarias; cierre contable mensual; operaciones intracomunitarias ordinarias; operaciones ordinarias con terceros países, incluida la contabilización de importaciones a partir de la documentación aduanera aportada; ventas mediante una tienda online propia y un marketplace; balance de situación y cuenta de pérdidas y ganancias; control de cuentas de socios y administradores; previsión fiscal; seguimiento presupuestario; reuniones con la dirección; atención prioritaria.", "featured": false}
+          {
+            "name": "Empresa Esencial",
+            "price": "150 € + IVA/mes",
+            "desc": "Contabilidad de hasta 40 documentos mensuales; una cuenta bancaria; declaraciones tributarias trimestrales y anuales; Impuesto sobre Sociedades; cierre contable y fiscal; legalización de libros; formulación y depósito de cuentas anuales; consultas ordinarias.",
+            "featured": false
+          },
+          {
+            "name": "Empresa Profesional",
+            "price": "190 € + IVA/mes",
+            "desc": "Contabilidad de hasta 100 documentos mensuales; gestión de hasta tres cuentas bancarias; conciliación bancaria mensual; operaciones intracomunitarias ordinarias; ventas online a través de una única tienda propia, sin marketplaces ni regímenes especiales de IVA; control de saldos de clientes y proveedores; gestión de amortizaciones; informe trimestral de resultados; consultas con la dirección; cumplimiento de todas las obligaciones anuales.",
+            "featured": true
+          },
+          {
+            "name": "Empresa Integral",
+            "price": "Desde 250 € + IVA/mes",
+            "desc": "Contabilidad de hasta 200 documentos mensuales; gestión de hasta cinco cuentas bancarias; cierre contable mensual; operaciones intracomunitarias ordinarias; operaciones ordinarias con terceros países, incluida la contabilización de importaciones a partir de la documentación aduanera aportada; ventas mediante una tienda online propia y un marketplace; balance de situación y cuenta de pérdidas y ganancias; control de cuentas de socios y administradores; previsión fiscal; reuniones con la dirección; atención prioritaria.",
+            "featured": false
+          }
         ]
       },
       "s2": {
         "h2": "2. Ampliaciones y suplementos",
         "subtitle": "Ampliaciones del plan según volumen, operativa y complejidad",
-        "table_head": ["Ampliación del servicio", "Suplemento"],
+        "table_head": [
+          "Ampliación del servicio",
+          "Suplemento"
+        ],
         "rows": [
-          ["Cada 25 documentos adicionales", "15–20 € + IVA"],
-          ["Cuenta bancaria adicional", "10 € + IVA/mes"],
-          ["Operaciones intracomunitarias", "15–25 € + IVA/mes"],
-          ["Operaciones con países no pertenecientes a la UE", "Desde 25 € + IVA/mes"],
-          ["Actividad económica adicional", "15–25 € + IVA/mes"],
-          ["Plataforma de venta online adicional", "Desde 25 € + IVA/mes"],
-          ["Gestión urgente en menos de 48 horas", "Recargo del 25–50 %"]
+          [
+            "Cada 25 documentos adicionales",
+            "15–20 € + IVA"
+          ],
+          [
+            "Cuenta bancaria adicional",
+            "10 € + IVA/mes"
+          ],
+          [
+            "Operaciones intracomunitarias",
+            "15–25 € + IVA/mes"
+          ],
+          [
+            "Operaciones con países no pertenecientes a la UE",
+            "Desde 25 € + IVA/mes"
+          ],
+          [
+            "Actividad económica adicional",
+            "15–25 € + IVA/mes"
+          ],
+          [
+            "Plataforma de venta online adicional",
+            "Desde 25 € + IVA/mes"
+          ],
+          [
+            "Gestión urgente en menos de 48 horas",
+            "Recargo del 25–50 %"
+          ]
         ],
         "note": "Los suplementos mensuales se aplicarán únicamente cuando la circunstancia correspondiente no esté incluida en el plan contratado o cuando su volumen exceda los límites establecidos. Todos los importes están sujetos a IVA."
       },
       "s3": {
         "h2": "3. Servicios fiscales puntuales y actuaciones ante la AEAT",
-        "table_head": ["Servicio", "Precio"],
+        "table_head": [
+          "Servicio",
+          "Precio"
+        ],
         "rows": [
-          ["Presentación extemporánea de una declaración", "Desde 75 € + IVA"],
-          ["Solicitud de rectificación de una autoliquidación", "Desde 90 € + IVA"],
-          ["Contestación a un requerimiento sencillo", "Desde 120 € + IVA"],
-          ["Preparación y presentación de alegaciones", "Desde 180 € + IVA"],
-          ["Preparación y presentación de recurso de reposición", "Desde 275 € + IVA"],
-          ["Inspección o comprobación tributaria", "Presupuesto personalizado + IVA"],
-          ["Alta o modificación en ROI/VIES", "50 € + IVA"],
-          ["Solicitud y asistencia en la obtención del certificado digital", "50 € + IVA"],
-          ["Regularización de ejercicios anteriores", "Según volumen + IVA"],
-          ["Consulta profesional por videollamada o presencial", "50 €/hora + IVA"]
+          [
+            "Presentación extemporánea de una declaración",
+            "Desde 75 € + IVA"
+          ],
+          [
+            "Solicitud de rectificación de una autoliquidación",
+            "Desde 90 € + IVA"
+          ],
+          [
+            "Contestación a un requerimiento sencillo",
+            "Desde 120 € + IVA"
+          ],
+          [
+            "Preparación y presentación de alegaciones",
+            "Desde 180 € + IVA"
+          ],
+          [
+            "Preparación y presentación de recurso de reposición",
+            "Desde 275 € + IVA"
+          ],
+          [
+            "Inspección o comprobación tributaria",
+            "Presupuesto personalizado + IVA"
+          ],
+          [
+            "Alta o modificación en ROI/VIES",
+            "50 € + IVA"
+          ],
+          [
+            "Solicitud y asistencia en la obtención del certificado digital",
+            "50 € + IVA"
+          ],
+          [
+            "Regularización de ejercicios anteriores",
+            "Según volumen + IVA"
+          ],
+          [
+            "Consulta profesional por videollamada o presencial",
+            "50 €/hora + IVA"
+          ]
         ],
         "note1": "Precio por una única actuación. La tramitación completa del expediente no está incluida. Los casos de especial complejidad podrán facturarse por horas, previa comunicación al cliente.",
         "note2": "La documentación deberá ser aportada por el cliente de forma completa y ordenada. Los trabajos de reconstrucción contable o documental se presupuestarán por separado."
@@ -162,15 +290,39 @@
       },
       "s5": {
         "h2": "5. Servicios laborales puntuales",
-        "table_head": ["Servicio", "Precio"],
+        "table_head": [
+          "Servicio",
+          "Precio"
+        ],
         "rows": [
-          ["Contrato y alta de trabajador", "35 € + IVA"],
-          ["Baja de trabajador", "20 € + IVA"],
-          ["Finiquito", "40 € + IVA"],
-          ["Despido objetivo o disciplinario", "Desde 100 € + IVA"],
-          ["Certificado de empresa", "25 € + IVA"],
-          ["Modificación contractual", "50 € + IVA"],
-          ["Consulta laboral especializada", "50 €/hora + IVA"]
+          [
+            "Contrato y alta de trabajador",
+            "35 € + IVA"
+          ],
+          [
+            "Baja de trabajador",
+            "20 € + IVA"
+          ],
+          [
+            "Finiquito",
+            "40 € + IVA"
+          ],
+          [
+            "Despido objetivo o disciplinario",
+            "Desde 100 € + IVA"
+          ],
+          [
+            "Certificado de empresa",
+            "25 € + IVA"
+          ],
+          [
+            "Modificación contractual",
+            "50 € + IVA"
+          ],
+          [
+            "Consulta laboral especializada",
+            "50 €/hora + IVA"
+          ]
         ],
         "note": "Los precios corresponden a actuaciones ordinarias. Los expedientes con especial complejidad o documentación incompleta se presupuestarán por separado."
       },
@@ -178,24 +330,69 @@
         "eyebrow": "Servicios fiscales para particulares",
         "h2": "6. Declaración de la Renta",
         "plans": [
-          {"name": "Renta básica", "price": "Desde 60 € + IVA", "desc": "Rendimientos del trabajo; intereses bancarios; deducciones habituales; una vivienda; sin operaciones de inversión ni rentas o bienes en el extranjero.", "featured": false},
-          {"name": "Renta patrimonial", "price": "Desde 110 € + IVA", "desc": "Varios inmuebles en España; rendimientos del alquiler; transmisión de bienes; acciones, fondos de inversión y bonos depositados en España; dividendos, intereses y cupones nacionales; compensación de ganancias y pérdidas patrimoniales; sin cuentas, activos ni rentas del extranjero.", "featured": true},
-          {"name": "Renta internacional", "price": "Desde 160 € + IVA", "desc": "Rentas y activos en el extranjero; cuentas y brókeres extranjeros; operaciones en distintas divisas; aplicación de convenios para evitar la doble imposición; dividendos, intereses y cupones extranjeros; acciones, fondos y bonos; comprobación de coherencia con los modelos 720 y 721.", "featured": false}
+          {
+            "name": "Renta básica",
+            "price": "Desde 60 € + IVA",
+            "desc": "Rendimientos del trabajo; intereses bancarios; deducciones habituales; una vivienda; sin operaciones de inversión ni rentas o bienes en el extranjero.",
+            "featured": false
+          },
+          {
+            "name": "Renta patrimonial",
+            "price": "Desde 110 € + IVA",
+            "desc": "Varios inmuebles en España; rendimientos del alquiler; transmisión de bienes; acciones, fondos de inversión y bonos depositados en España; dividendos, intereses y cupones nacionales; compensación de ganancias y pérdidas patrimoniales; sin cuentas, activos ni rentas del extranjero.",
+            "featured": true
+          },
+          {
+            "name": "Renta internacional",
+            "price": "Desde 160 € + IVA",
+            "desc": "Rentas y activos en el extranjero; cuentas y brókeres extranjeros; operaciones en distintas divisas; aplicación de convenios para evitar la doble imposición; dividendos, intereses y cupones extranjeros; acciones, fondos y bonos; comprobación de coherencia con los modelos 720 y 721.",
+            "featured": false
+          }
         ]
       },
       "s7": {
         "h2": "7. Modelos y actuaciones adicionales",
-        "table_head": ["Servicio", "Precio"],
+        "table_head": [
+          "Servicio",
+          "Precio"
+        ],
         "rows": [
-          ["Renta de No Residentes — Modelo 210 (según el tipo de renta y el número de inmuebles o pagadores)", "Desde 75 € + IVA"],
-          ["Modelo 720", "Desde 120 € + IVA"],
-          ["Modelo 721", "Desde 120 € + IVA"],
-          ["Pack Renta + Modelos 720 y 721", "Desde 250 € + IVA"],
-          ["Pack Renta + Modelos 720 y 721 con mayor volumen o complejidad", "Desde 350 € + IVA"],
-          ["Impuesto sobre el Patrimonio — Modelo 714", "Desde 150 € + IVA"],
-          ["Contestación a un requerimiento sencillo relativo a una única declaración", "Desde 120 € + IVA"],
-          ["Preparación y presentación de alegaciones relativas a una única declaración", "Desde 180 € + IVA"],
-          ["Consulta fiscal especializada", "Desde 50 €/hora + IVA"]
+          [
+            "Renta de No Residentes — Modelo 210 (según el tipo de renta y el número de inmuebles o pagadores)",
+            "Desde 75 € + IVA"
+          ],
+          [
+            "Modelo 720",
+            "Desde 120 € + IVA"
+          ],
+          [
+            "Modelo 721",
+            "Desde 120 € + IVA"
+          ],
+          [
+            "Pack Renta + Modelos 720 y 721",
+            "Desde 250 € + IVA"
+          ],
+          [
+            "Pack Renta + Modelos 720 y 721 con mayor volumen o complejidad",
+            "Desde 350 € + IVA"
+          ],
+          [
+            "Impuesto sobre el Patrimonio — Modelo 714",
+            "Desde 150 € + IVA"
+          ],
+          [
+            "Contestación a un requerimiento sencillo relativo a una única declaración",
+            "Desde 120 € + IVA"
+          ],
+          [
+            "Preparación y presentación de alegaciones relativas a una única declaración",
+            "Desde 180 € + IVA"
+          ],
+          [
+            "Consulta fiscal especializada",
+            "Desde 50 €/hora + IVA"
+          ]
         ],
         "note": "Los precios indicados corresponden al alcance estándar descrito. Cuando el asunto presente un mayor volumen o complejidad, se comunicará previamente el presupuesto correspondiente, sin iniciar ningún trabajo adicional sin la aceptación del cliente."
       },
@@ -236,9 +433,18 @@
         "eyebrow": "Cómo trabajo",
         "h2": "Mi forma de trabajar",
         "cards": [
-          {"title": "Atención directa", "desc": "Comunicación personal y seguimiento de cada asunto sin intermediarios."},
-          {"title": "Claridad y transparencia", "desc": "Honorarios claros desde el primer momento, sin sorpresas ni letra pequeña."},
-          {"title": "Modalidad de atención", "desc": "La atención se presta principalmente online, mediante correo electrónico, videollamadas y plataformas digitales. Las reuniones presenciales podrán concertarse con cita previa en Valencia cuando resulte necesario."}
+          {
+            "title": "Atención directa",
+            "desc": "Comunicación personal y seguimiento de cada asunto sin intermediarios."
+          },
+          {
+            "title": "Claridad y transparencia",
+            "desc": "Honorarios claros desde el primer momento, sin sorpresas ni letra pequeña."
+          },
+          {
+            "title": "Modalidad de atención",
+            "desc": "La atención se presta principalmente online, mediante correo electrónico, videollamadas y plataformas digitales. Las reuniones presenciales podrán concertarse con cita previa en Valencia cuando resulte necesario."
+          }
         ]
       },
       "cta": {
@@ -255,9 +461,18 @@
       "h1": "Hablemos de su caso",
       "lead": "Cuéntenos brevemente qué servicio necesita. Revisaremos su consulta y le indicaremos los siguientes pasos.",
       "quick_menu": [
-        {"anchor": "contacto-formulario", "label": "Formulario de contacto"},
-        {"anchor": "llamada-gratuita", "label": "Llamada inicial gratuita"},
-        {"anchor": "consulta", "label": "Consulta de pago (50 €/hora)"}
+        {
+          "anchor": "contacto-formulario",
+          "label": "Formulario de contacto"
+        },
+        {
+          "anchor": "llamada-gratuita",
+          "label": "Llamada inicial gratuita"
+        },
+        {
+          "anchor": "consulta",
+          "label": "Consulta de pago (50 €/hora)"
+        }
       ],
       "general": {
         "h2": "Formulario de contacto",
@@ -275,7 +490,16 @@
           "privacy_post": ".",
           "submit": "Enviar mensaje"
         },
-        "tipo_options": ["Contabilidad y fiscalidad para empresas", "Gestión laboral", "Declaración de la Renta", "Declaración de la Renta de No Residentes", "Fiscalidad internacional", "Modelos 720 y 721", "Requerimiento o actuación ante la AEAT", "Otro"],
+        "tipo_options": [
+          "Contabilidad y fiscalidad para empresas",
+          "Gestión laboral",
+          "Declaración de la Renta",
+          "Declaración de la Renta de No Residentes",
+          "Fiscalidad internacional",
+          "Modelos 720 y 721",
+          "Requerimiento o actuación ante la AEAT",
+          "Otro"
+        ],
         "success": "Gracias por su mensaje. Le responderemos lo antes posible.",
         "error": "No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es."
       },
@@ -303,7 +527,14 @@
           "privacy_post": ".",
           "submit": "Enviar datos"
         },
-        "tipo_options": ["Contabilidad y fiscalidad para empresas", "Gestión laboral", "Declaración de la Renta", "Fiscalidad internacional", "Modelos 720 y 721", "Otro"],
+        "tipo_options": [
+          "Contabilidad y fiscalidad para empresas",
+          "Gestión laboral",
+          "Declaración de la Renta",
+          "Fiscalidad internacional",
+          "Modelos 720 y 721",
+          "Otro"
+        ],
         "success": "Gracias. Ahora seleccione fecha y hora en el calendario para confirmar la llamada.",
         "error": "No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.",
         "booking": {
@@ -320,7 +551,10 @@
         "labels": {
           "full_name": "Nombre y apellidos / Razón social",
           "billing_type": "¿La factura se emitirá a un particular o a una empresa?",
-          "billing_type_options": ["Particular", "Empresa"],
+          "billing_type_options": [
+            "Particular",
+            "Empresa"
+          ],
           "tax_id": "DNI, NIE, NIF o CIF",
           "fiscal_address": "Dirección fiscal",
           "email": "Correo electrónico",
@@ -334,7 +568,16 @@
           "privacy_post": ".",
           "submit": "Enviar datos"
         },
-        "tipo_options": ["Contabilidad y fiscalidad para empresas", "Gestión laboral", "Declaración de la Renta", "Declaración de la Renta de No Residentes", "Fiscalidad internacional", "Modelos 720 y 721", "Requerimiento o actuación ante la AEAT", "Otro"],
+        "tipo_options": [
+          "Contabilidad y fiscalidad para empresas",
+          "Gestión laboral",
+          "Declaración de la Renta",
+          "Declaración de la Renta de No Residentes",
+          "Fiscalidad internacional",
+          "Modelos 720 y 721",
+          "Requerimiento o actuación ante la AEAT",
+          "Otro"
+        ],
         "success": "Gracias. Ahora seleccione fecha y hora. Recibirá las instrucciones de pago por correo electrónico.",
         "error": "No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.",
         "booking": {
@@ -355,40 +598,121 @@
       "h1": "Aviso Legal",
       "updated": "Última actualización: agosto de 2026",
       "blocks": [
-        {"type": "h2", "text": "Identificación y titularidad"},
-        {"type": "p", "text": "El presente Aviso Legal se publica en cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico. Los datos identificativos de la titular del sitio web son los siguientes:"},
-        {"type": "ul", "entries": [
-          "Titular: Anzhelika Ved",
-          "NIF/NIE: Y9563616T",
-          "Domicilio: Calle Filólogo Sanelo 3, 46009, Valencia, España",
-          "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
-          "Teléfono de contacto: <a href=\"tel:+34615505070\">615 50 50 70</a>",
-          "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
-        ]},
-        {"type": "h2", "text": "Datos profesionales"},
-        {"type": "p", "text": "Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia."},
-        {"type": "p", "text": "Título oficial: Máster Universitario en Gestoría Administrativa, expedido en España."},
-        {"type": "p", "text": "La actividad profesional se encuentra sujeta a la normativa aplicable a la profesión de Gestor Administrativo y a las normas profesionales y deontológicas del Colegio correspondiente, consultables en su sitio web oficial."},
-        {"type": "h2", "text": "Finalidad"},
-        {"type": "p", "text": "La finalidad de este sitio web es informar sobre los servicios profesionales de gestión administrativa, contable, fiscal y laboral ofrecidos por la Titular, así como facilitar el contacto, la solicitud de información y la reserva de consultas."},
-        {"type": "h2", "text": "Condiciones de uso"},
-        {"type": "p", "text": "El acceso y la navegación por este sitio web atribuyen la condición de usuario e implican la aceptación de las presentes condiciones de uso."},
-        {"type": "p", "text": "El usuario se compromete a utilizar el sitio web, sus contenidos y servicios de forma lícita, responsable y conforme a la legislación vigente, absteniéndose de realizar actuaciones que puedan dañar el sitio web, afectar a su funcionamiento o vulnerar los derechos de terceros."},
-        {"type": "p", "text": "El acceso al sitio web y el envío de una consulta no implican por sí solos el inicio de una relación profesional o contractual. Esta relación únicamente se entenderá iniciada cuando la Titular haya aceptado expresamente el encargo y se hayan acordado su alcance y condiciones."},
-        {"type": "h2", "text": "Información y limitación de responsabilidad"},
-        {"type": "p", "text": "Los contenidos publicados en este sitio web tienen carácter general e informativo y no constituyen asesoramiento profesional individualizado."},
-        {"type": "p", "text": "La aplicación de la normativa fiscal, contable, laboral o administrativa depende de las circunstancias concretas de cada caso. Antes de adoptar una decisión, deberá solicitarse el correspondiente análisis profesional."},
-        {"type": "p", "text": "La Titular procura que la información publicada sea correcta y esté actualizada, pero no puede garantizar la ausencia absoluta de errores ni la actualización inmediata de todos los contenidos tras cada modificación normativa."},
-        {"type": "h2", "text": "Propiedad intelectual e industrial"},
-        {"type": "p", "text": "Los textos, diseños, logotipos, imágenes y demás contenidos propios de este sitio web están protegidos por la normativa sobre propiedad intelectual e industrial. Queda prohibida su reproducción, distribución, transformación o utilización con fines comerciales sin autorización previa y por escrito de la Titular, salvo en los casos permitidos por la ley."},
-        {"type": "h2", "text": "Enlaces externos"},
-        {"type": "p", "text": "Este sitio web puede incluir enlaces a páginas de terceros, incluido Microsoft Bookings para la reserva de citas. La Titular no controla sus contenidos, disponibilidad ni políticas de privacidad y no asume responsabilidad por ellos. La inclusión de un enlace no implica aprobación, recomendación ni relación con el titular del sitio enlazado."},
-        {"type": "h2", "text": "Protección de datos personales"},
-        {"type": "p", "text": "La información relativa al tratamiento de datos personales está disponible en la <a href=\"politica-de-privacidad.html\">Política de Privacidad</a>."},
-        {"type": "h2", "text": "Cookies"},
-        {"type": "p", "text": "La información sobre las cookies utilizadas en este sitio web y la gestión del consentimiento está disponible en la <a href=\"politica-de-cookies.html\">Política de Cookies</a> y mediante el enlace «Configuración de cookies» disponible en el pie de página."},
-        {"type": "h2", "text": "Legislación aplicable"},
-        {"type": "p", "text": "El presente Aviso Legal se rige por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales que resulten competentes de acuerdo con la normativa aplicable."}
+        {
+          "type": "h2",
+          "text": "Identificación y titularidad"
+        },
+        {
+          "type": "p",
+          "text": "El presente Aviso Legal se publica en cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico. Los datos identificativos de la titular del sitio web son los siguientes:"
+        },
+        {
+          "type": "ul",
+          "entries": [
+            "Titular: Anzhelika Ved",
+            "NIF/NIE: Y9563616T",
+            "Domicilio: Calle Filólogo Sanelo 3, 46009, Valencia, España",
+            "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
+            "Teléfono de contacto: <a href=\"tel:+34615505070\">615 50 50 70</a>",
+            "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "Datos profesionales"
+        },
+        {
+          "type": "p",
+          "text": "Gestora Administrativa colegiada n.º 02449 en el Ilustre Colegio Oficial de Gestores Administrativos de Valencia."
+        },
+        {
+          "type": "p",
+          "text": "Título oficial: Máster Universitario en Gestoría Administrativa, expedido en España."
+        },
+        {
+          "type": "p",
+          "text": "La actividad profesional se encuentra sujeta a la normativa aplicable a la profesión de Gestor Administrativo y a las normas profesionales y deontológicas del Colegio correspondiente, consultables en su sitio web oficial."
+        },
+        {
+          "type": "h2",
+          "text": "Finalidad"
+        },
+        {
+          "type": "p",
+          "text": "La finalidad de este sitio web es informar sobre los servicios profesionales de gestión administrativa, contable, fiscal y laboral ofrecidos por la Titular, así como facilitar el contacto, la solicitud de información y la reserva de consultas."
+        },
+        {
+          "type": "h2",
+          "text": "Condiciones de uso"
+        },
+        {
+          "type": "p",
+          "text": "El acceso y la navegación por este sitio web atribuyen la condición de usuario e implican la aceptación de las presentes condiciones de uso."
+        },
+        {
+          "type": "p",
+          "text": "El usuario se compromete a utilizar el sitio web, sus contenidos y servicios de forma lícita, responsable y conforme a la legislación vigente, absteniéndose de realizar actuaciones que puedan dañar el sitio web, afectar a su funcionamiento o vulnerar los derechos de terceros."
+        },
+        {
+          "type": "p",
+          "text": "El acceso al sitio web y el envío de una consulta no implican por sí solos el inicio de una relación profesional o contractual. Esta relación únicamente se entenderá iniciada cuando la Titular haya aceptado expresamente el encargo y se hayan acordado su alcance y condiciones."
+        },
+        {
+          "type": "h2",
+          "text": "Información y limitación de responsabilidad"
+        },
+        {
+          "type": "p",
+          "text": "Los contenidos publicados en este sitio web tienen carácter general e informativo y no constituyen asesoramiento profesional individualizado."
+        },
+        {
+          "type": "p",
+          "text": "La aplicación de la normativa fiscal, contable, laboral o administrativa depende de las circunstancias concretas de cada caso. Antes de adoptar una decisión, deberá solicitarse el correspondiente análisis profesional."
+        },
+        {
+          "type": "p",
+          "text": "La Titular procura que la información publicada sea correcta y esté actualizada, pero no puede garantizar la ausencia absoluta de errores ni la actualización inmediata de todos los contenidos tras cada modificación normativa."
+        },
+        {
+          "type": "h2",
+          "text": "Propiedad intelectual e industrial"
+        },
+        {
+          "type": "p",
+          "text": "Los textos, diseños, logotipos, imágenes y demás contenidos propios de este sitio web están protegidos por la normativa sobre propiedad intelectual e industrial. Queda prohibida su reproducción, distribución, transformación o utilización con fines comerciales sin autorización previa y por escrito de la Titular, salvo en los casos permitidos por la ley."
+        },
+        {
+          "type": "h2",
+          "text": "Enlaces externos"
+        },
+        {
+          "type": "p",
+          "text": "Este sitio web puede incluir enlaces a páginas de terceros, incluido Microsoft Bookings para la reserva de citas. La Titular no controla sus contenidos, disponibilidad ni políticas de privacidad y no asume responsabilidad por ellos. La inclusión de un enlace no implica aprobación, recomendación ni relación con el titular del sitio enlazado."
+        },
+        {
+          "type": "h2",
+          "text": "Protección de datos personales"
+        },
+        {
+          "type": "p",
+          "text": "La información relativa al tratamiento de datos personales está disponible en la <a href=\"politica-de-privacidad.html\">Política de Privacidad</a>."
+        },
+        {
+          "type": "h2",
+          "text": "Cookies"
+        },
+        {
+          "type": "p",
+          "text": "La información sobre las cookies utilizadas en este sitio web y la gestión del consentimiento está disponible en la <a href=\"politica-de-cookies.html\">Política de Cookies</a> y mediante el enlace «Configuración de cookies» disponible en el pie de página."
+        },
+        {
+          "type": "h2",
+          "text": "Legislación aplicable"
+        },
+        {
+          "type": "p",
+          "text": "El presente Aviso Legal se rige por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales que resulten competentes de acuerdo con la normativa aplicable."
+        }
       ]
     },
     "legal_privacidad": {
@@ -397,53 +721,174 @@
       "h1": "Política de Privacidad",
       "updated": "Última actualización: agosto de 2026 · Versión 1.0 · Base normativa revisada: RGPD y LOPDGDD vigente a 4 de agosto de 2026",
       "blocks": [
-        {"type": "h2", "text": "1. Responsable del tratamiento"},
-        {"type": "ul", "entries": [
-          "Responsable: Anzhelika Ved",
-          "NIF/NIE: Y9563616T",
-          "Domicilio profesional: Calle Filólogo Sanelo 3, 46009, Valencia, España",
-          "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
-          "Teléfono: <a href=\"tel:+34615505070\">615 50 50 70</a>",
-          "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
-        ]},
-        {"type": "h2", "text": "2. Datos que se pueden recoger"},
-        {"type": "p", "text": "A través de este sitio web podrán recabarse los datos que el usuario facilite mediante los formularios de contacto o reserva, por correo electrónico, teléfono, WhatsApp o durante la contratación y prestación de servicios profesionales."},
-        {"type": "p", "text": "Estos datos pueden incluir nombre y apellidos, datos de contacto, datos identificativos y fiscales, dirección de facturación, información relativa a la consulta y la documentación necesaria para prestar el servicio solicitado."},
-        {"type": "p", "text": "También podrán recabarse copias de documentos de identidad, datos de representación, poderes o autorizaciones, información sobre la titularidad real de personas jurídicas y demás documentación necesaria para verificar la identidad del cliente y cumplir las obligaciones profesionales y legales aplicables."},
-        {"type": "h2", "text": "3. Finalidades y bases jurídicas"},
-        {"type": "table", "head": ["Finalidad", "Base jurídica"], "rows": [
-          ["Responder a consultas y solicitudes de información", "Consentimiento del interesado y aplicación de medidas precontractuales"],
-          ["Gestionar reservas de consultas", "Aplicación de medidas precontractuales"],
-          ["Prestar los servicios profesionales contratados", "Ejecución de un contrato"],
-          ["Emitir facturas y cumplir obligaciones fiscales, contables y profesionales", "Cumplimiento de obligaciones legales"],
-          ["Atender reclamaciones y defender derechos e intereses legítimos", "Cumplimiento de obligaciones legales e interés legítimo"],
-          ["Verificar la identidad del cliente, de sus representantes y, cuando proceda, de la persona titular real", "Cumplimiento de obligaciones legales y aplicación de medidas precontractuales"],
-          ["Cumplir las obligaciones en materia de prevención del blanqueo de capitales y financiación del terrorismo", "Cumplimiento de una obligación legal"]
-        ]},
-        {"type": "p", "text": "Los datos no se utilizarán para enviar comunicaciones comerciales, salvo que el interesado lo haya autorizado expresamente."},
-        {"type": "h2", "text": "4. Plazos de conservación"},
-        {"type": "p", "text": "Los datos relativos a consultas que no den lugar a la contratación de un servicio se conservarán durante el tiempo necesario para responder y realizar el seguimiento de la solicitud y, posteriormente, durante el plazo imprescindible para atender posibles responsabilidades."},
-        {"type": "p", "text": "Los datos de clientes, facturación y expedientes profesionales se conservarán mientras dure la relación profesional y, una vez finalizada, durante los plazos exigidos por la normativa fiscal, contable, profesional y demás normativa aplicable."},
-        {"type": "p", "text": "Cuando el tratamiento se base exclusivamente en el consentimiento, los datos se conservarán hasta que este sea retirado, sin perjuicio de las obligaciones legales de conservación."},
-        {"type": "p", "text": "La documentación obtenida para el cumplimiento de las obligaciones en materia de prevención del blanqueo de capitales y financiación del terrorismo se conservará durante los plazos establecidos en la normativa específica aplicable."},
-        {"type": "h2", "text": "5. Destinatarios y proveedores"},
-        {"type": "p", "text": "Los datos no serán cedidos a terceros, salvo cuando sea necesario para prestar el servicio solicitado, exista una obligación legal o resulte necesario para la gestión del expediente profesional."},
-        {"type": "p", "text": "Podrán tener acceso a los datos determinados proveedores que prestan servicios tecnológicos, de alojamiento web, correo electrónico, almacenamiento, videollamada, reserva de citas (incluido Microsoft 365 / Outlook / Bookings), formularios de contacto, facturación o soporte informático, actuando, cuando corresponda, como encargados del tratamiento."},
-        {"type": "p", "text": "También podrán comunicarse datos a administraciones públicas, organismos oficiales, entidades financieras, registros, colegios profesionales, juzgados y tribunales cuando resulte necesario o legalmente obligatorio."},
-        {"type": "h2", "text": "6. Transferencias internacionales"},
-        {"type": "p", "text": "Algunos proveedores tecnológicos pueden tratar datos fuera del Espacio Económico Europeo. Cuando resulte aplicable, dichas transferencias se realizarán utilizando las garantías previstas en la normativa de protección de datos. La información concreta sobre los proveedores utilizados se mantendrá actualizada en esta Política de Privacidad."},
-        {"type": "h2", "text": "7. Derechos"},
-        {"type": "p", "text": "El interesado puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad cuando resulten aplicables, así como retirar el consentimiento otorgado, enviando una solicitud a <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a> e indicando el derecho que desea ejercer."},
-        {"type": "p", "text": "Cuando existan dudas razonables sobre la identidad del solicitante, podrá requerirse información adicional estrictamente necesaria para verificarla."},
-        {"type": "p", "text": "Asimismo, el interesado puede presentar una reclamación ante la Agencia Española de Protección de Datos."},
-        {"type": "h2", "text": "8. Seguridad"},
-        {"type": "p", "text": "La Responsable aplicará medidas técnicas y organizativas apropiadas para proteger los datos personales frente a su pérdida, alteración, acceso no autorizado o tratamiento ilícito, teniendo en cuenta la naturaleza de los datos, los riesgos y los medios disponibles."},
-        {"type": "h2", "text": "9. Exactitud de los datos"},
-        {"type": "p", "text": "El usuario es responsable de que los datos facilitados sean correctos y estén actualizados, y deberá comunicar cualquier modificación relevante."},
-        {"type": "h2", "text": "10. Enlaces y servicios de terceros"},
-        {"type": "p", "text": "El sitio web puede contener enlaces a páginas o servicios de terceros, como Microsoft Bookings. El tratamiento de datos realizado en dichos sitios se regirá por sus propias políticas de privacidad."},
-        {"type": "h2", "text": "11. Modificaciones"},
-        {"type": "p", "text": "Esta Política de Privacidad podrá actualizarse cuando cambien la normativa, los servicios ofrecidos o las herramientas tecnológicas utilizadas. La versión vigente será la publicada en este sitio web."}
+        {
+          "type": "h2",
+          "text": "1. Responsable del tratamiento"
+        },
+        {
+          "type": "ul",
+          "entries": [
+            "Responsable: Anzhelika Ved",
+            "NIF/NIE: Y9563616T",
+            "Domicilio profesional: Calle Filólogo Sanelo 3, 46009, Valencia, España",
+            "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
+            "Teléfono: <a href=\"tel:+34615505070\">615 50 50 70</a>",
+            "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "2. Datos que se pueden recoger"
+        },
+        {
+          "type": "p",
+          "text": "A través de este sitio web podrán recabarse los datos que el usuario facilite mediante los formularios de contacto o reserva, por correo electrónico, teléfono, WhatsApp o durante la contratación y prestación de servicios profesionales."
+        },
+        {
+          "type": "p",
+          "text": "Estos datos pueden incluir nombre y apellidos, datos de contacto, datos identificativos y fiscales, dirección de facturación, información relativa a la consulta y la documentación necesaria para prestar el servicio solicitado."
+        },
+        {
+          "type": "p",
+          "text": "También podrán recabarse copias de documentos de identidad, datos de representación, poderes o autorizaciones, información sobre la titularidad real de personas jurídicas y demás documentación necesaria para verificar la identidad del cliente y cumplir las obligaciones profesionales y legales aplicables."
+        },
+        {
+          "type": "h2",
+          "text": "3. Finalidades y bases jurídicas"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Finalidad",
+            "Base jurídica"
+          ],
+          "rows": [
+            [
+              "Responder a consultas y solicitudes de información",
+              "Consentimiento del interesado y aplicación de medidas precontractuales"
+            ],
+            [
+              "Gestionar reservas de consultas",
+              "Aplicación de medidas precontractuales"
+            ],
+            [
+              "Prestar los servicios profesionales contratados",
+              "Ejecución de un contrato"
+            ],
+            [
+              "Emitir facturas y cumplir obligaciones fiscales, contables y profesionales",
+              "Cumplimiento de obligaciones legales"
+            ],
+            [
+              "Atender reclamaciones y defender derechos e intereses legítimos",
+              "Cumplimiento de obligaciones legales e interés legítimo"
+            ],
+            [
+              "Verificar la identidad del cliente, de sus representantes y, cuando proceda, de la persona titular real",
+              "Cumplimiento de obligaciones legales y aplicación de medidas precontractuales"
+            ],
+            [
+              "Cumplir las obligaciones en materia de prevención del blanqueo de capitales y financiación del terrorismo",
+              "Cumplimiento de una obligación legal"
+            ]
+          ]
+        },
+        {
+          "type": "p",
+          "text": "Los datos no se utilizarán para enviar comunicaciones comerciales, salvo que el interesado lo haya autorizado expresamente."
+        },
+        {
+          "type": "h2",
+          "text": "4. Plazos de conservación"
+        },
+        {
+          "type": "p",
+          "text": "Los datos relativos a consultas que no den lugar a la contratación de un servicio se conservarán durante el tiempo necesario para responder y realizar el seguimiento de la solicitud y, posteriormente, durante el plazo imprescindible para atender posibles responsabilidades."
+        },
+        {
+          "type": "p",
+          "text": "Los datos de clientes, facturación y expedientes profesionales se conservarán mientras dure la relación profesional y, una vez finalizada, durante los plazos exigidos por la normativa fiscal, contable, profesional y demás normativa aplicable."
+        },
+        {
+          "type": "p",
+          "text": "Cuando el tratamiento se base exclusivamente en el consentimiento, los datos se conservarán hasta que este sea retirado, sin perjuicio de las obligaciones legales de conservación."
+        },
+        {
+          "type": "p",
+          "text": "La documentación obtenida para el cumplimiento de las obligaciones en materia de prevención del blanqueo de capitales y financiación del terrorismo se conservará durante los plazos establecidos en la normativa específica aplicable."
+        },
+        {
+          "type": "h2",
+          "text": "5. Destinatarios y proveedores"
+        },
+        {
+          "type": "p",
+          "text": "Los datos no serán cedidos a terceros, salvo cuando sea necesario para prestar el servicio solicitado, exista una obligación legal o resulte necesario para la gestión del expediente profesional."
+        },
+        {
+          "type": "p",
+          "text": "Podrán tener acceso a los datos determinados proveedores que prestan servicios tecnológicos, de alojamiento web, correo electrónico, almacenamiento, videollamada, reserva de citas (incluido Microsoft 365 / Outlook / Bookings), formularios de contacto, facturación o soporte informático, actuando, cuando corresponda, como encargados del tratamiento."
+        },
+        {
+          "type": "p",
+          "text": "También podrán comunicarse datos a administraciones públicas, organismos oficiales, entidades financieras, registros, colegios profesionales, juzgados y tribunales cuando resulte necesario o legalmente obligatorio."
+        },
+        {
+          "type": "h2",
+          "text": "6. Transferencias internacionales"
+        },
+        {
+          "type": "p",
+          "text": "Algunos proveedores tecnológicos pueden tratar datos fuera del Espacio Económico Europeo. Cuando resulte aplicable, dichas transferencias se realizarán utilizando las garantías previstas en la normativa de protección de datos. La información concreta sobre los proveedores utilizados se mantendrá actualizada en esta Política de Privacidad."
+        },
+        {
+          "type": "h2",
+          "text": "7. Derechos"
+        },
+        {
+          "type": "p",
+          "text": "El interesado puede ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad cuando resulten aplicables, así como retirar el consentimiento otorgado, enviando una solicitud a <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a> e indicando el derecho que desea ejercer."
+        },
+        {
+          "type": "p",
+          "text": "Cuando existan dudas razonables sobre la identidad del solicitante, podrá requerirse información adicional estrictamente necesaria para verificarla."
+        },
+        {
+          "type": "p",
+          "text": "Asimismo, el interesado puede presentar una reclamación ante la Agencia Española de Protección de Datos."
+        },
+        {
+          "type": "h2",
+          "text": "8. Seguridad"
+        },
+        {
+          "type": "p",
+          "text": "La Responsable aplicará medidas técnicas y organizativas apropiadas para proteger los datos personales frente a su pérdida, alteración, acceso no autorizado o tratamiento ilícito, teniendo en cuenta la naturaleza de los datos, los riesgos y los medios disponibles."
+        },
+        {
+          "type": "h2",
+          "text": "9. Exactitud de los datos"
+        },
+        {
+          "type": "p",
+          "text": "El usuario es responsable de que los datos facilitados sean correctos y estén actualizados, y deberá comunicar cualquier modificación relevante."
+        },
+        {
+          "type": "h2",
+          "text": "10. Enlaces y servicios de terceros"
+        },
+        {
+          "type": "p",
+          "text": "El sitio web puede contener enlaces a páginas o servicios de terceros, como Microsoft Bookings. El tratamiento de datos realizado en dichos sitios se regirá por sus propias políticas de privacidad."
+        },
+        {
+          "type": "h2",
+          "text": "11. Modificaciones"
+        },
+        {
+          "type": "p",
+          "text": "Esta Política de Privacidad podrá actualizarse cuando cambien la normativa, los servicios ofrecidos o las herramientas tecnológicas utilizadas. La versión vigente será la publicada en este sitio web."
+        }
       ]
     },
     "legal_cookies": {
@@ -452,42 +897,141 @@
       "h1": "Política de Cookies",
       "updated": "Última actualización: agosto de 2026 · Versión 1.0",
       "blocks": [
-        {"type": "h2", "text": "1. Responsable"},
-        {"type": "ul", "entries": [
-          "Responsable: Anzhelika Ved",
-          "NIF/NIE: Y9563616T",
-          "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
-          "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
-        ]},
-        {"type": "h2", "text": "2. Normativa aplicable"},
-        {"type": "p", "text": "La presente Política de Cookies se publica de conformidad con el artículo 22.2 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, en relación con el Reglamento (UE) 2016/679, General de Protección de Datos, y la Ley Orgánica 3/2018, de protección de datos personales y garantía de los derechos digitales."},
-        {"type": "h2", "text": "3. ¿Qué son las cookies?"},
-        {"type": "p", "text": "Las cookies son pequeños archivos que se descargan o almacenan en el dispositivo del usuario al acceder a determinados sitios web. Permiten, entre otras funciones, asegurar el funcionamiento técnico del sitio, recordar determinadas preferencias y, cuando se utilicen con consentimiento, obtener información sobre la navegación."},
-        {"type": "h2", "text": "4. Cookies utilizadas"},
-        {"type": "p", "text": "Este sitio web utiliza cookies técnicas necesarias para permitir su funcionamiento, mantener la seguridad, gestionar las preferencias del usuario y recordar, cuando proceda, las decisiones relativas al consentimiento de cookies."},
-        {"type": "p", "text": "Las cookies técnicas estrictamente necesarias no requieren consentimiento."},
-        {"type": "p", "text": "El sitio web no instalará cookies de análisis, publicidad, personalización no necesaria ni otras cookies de terceros antes de obtener el consentimiento del usuario, cuando dicho consentimiento resulte exigible."},
-        {"type": "h2", "text": "5. Categorías de cookies"},
-        {"type": "p", "text": "<strong>Cookies técnicas necesarias:</strong> permiten el funcionamiento básico, la seguridad, la navegación, la gestión de formularios y el almacenamiento de las preferencias de consentimiento."},
-        {"type": "p", "text": "<strong>Cookies de preferencias:</strong> permiten recordar determinadas opciones del usuario, como el idioma seleccionado, cuando dicha función esté habilitada."},
-        {"type": "p", "text": "<strong>Cookies de análisis o medición:</strong> permiten obtener información estadística sobre el uso del sitio web. Solo se utilizarán si están efectivamente instaladas y, cuando corresponda, después de obtener el consentimiento del usuario."},
-        {"type": "p", "text": "<strong>Cookies de terceros:</strong> pueden ser instaladas por servicios externos integrados en el sitio web, como herramientas de reserva de citas (Microsoft Bookings). Al pulsar el botón «Seleccionar fecha y hora», el usuario es redirigido a la página externa de Microsoft Bookings; este sitio no carga dicho servicio de forma automática ni establece sus cookies."},
-        {"type": "h2", "text": "6. Gestión del consentimiento"},
-        {"type": "p", "text": "Al acceder al sitio web, el usuario podrá aceptar, rechazar o configurar las cookies no necesarias mediante el panel de consentimiento."},
-        {"type": "p", "text": "La opción de rechazar las cookies se ofrece con una visibilidad y facilidad equivalentes a la opción de aceptarlas."},
-        {"type": "p", "text": "Las cookies no necesarias permanecerán bloqueadas hasta que el usuario haya prestado su consentimiento."},
-        {"type": "p", "text": "El usuario podrá modificar o retirar su consentimiento en cualquier momento mediante el enlace «Configuración de cookies», disponible de forma permanente en el pie de página."},
-        {"type": "h2", "text": "7. Relación de cookies"},
-        {"type": "table", "head": ["Cookie", "Proveedor", "Finalidad", "Duración"], "rows": [
-          ["Preferencia de consentimiento de cookies", "Propia (almacenamiento local del navegador)", "Recordar la decisión del usuario sobre cookies", "Hasta que el usuario la elimine"]
-        ], "note": "Esta tabla se ampliará si en el futuro se incorporan nuevas herramientas (por ejemplo, analítica) tras la correspondiente actualización de esta política."},
-        {"type": "h2", "text": "8. Cookies de terceros"},
-        {"type": "p", "text": "Cuando el sitio web incorpore o enlace a servicios de terceros, el usuario podrá consultar información adicional sobre sus cookies y tratamientos de datos en las políticas de dichos proveedores. La inclusión de un enlace externo no autoriza por sí sola la instalación previa de cookies no necesarias."},
-        {"type": "h2", "text": "9. Eliminación mediante el navegador"},
-        {"type": "p", "text": "El usuario también puede permitir, bloquear o eliminar cookies mediante la configuración de su navegador (por ejemplo, Chrome, Edge, Firefox o Safari). La desactivación de determinadas cookies técnicas puede afectar al funcionamiento correcto del sitio web."},
-        {"type": "h2", "text": "10. Actualizaciones"},
-        {"type": "p", "text": "Esta Política de Cookies podrá actualizarse cuando cambien las herramientas utilizadas, la configuración del sitio web o la normativa aplicable."},
-        {"type": "note", "html": "<strong>¿Quiere cambiar su elección?</strong> Puede abrir el panel de configuración en cualquier momento desde el pie de página.<div style=\"margin-top:12px;\"><button class=\"btn btn-primary btn-sm\" data-cookie-open-prefs>Configuración de cookies</button></div>"}
+        {
+          "type": "h2",
+          "text": "1. Responsable"
+        },
+        {
+          "type": "ul",
+          "entries": [
+            "Responsable: Anzhelika Ved",
+            "NIF/NIE: Y9563616T",
+            "Correo electrónico: <a href=\"mailto:contact@aavgestoria.es\">contact@aavgestoria.es</a>",
+            "Sitio web: <a href=\"https://aavgestoria.es\">https://aavgestoria.es</a>"
+          ]
+        },
+        {
+          "type": "h2",
+          "text": "2. Normativa aplicable"
+        },
+        {
+          "type": "p",
+          "text": "La presente Política de Cookies se publica de conformidad con el artículo 22.2 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico, en relación con el Reglamento (UE) 2016/679, General de Protección de Datos, y la Ley Orgánica 3/2018, de protección de datos personales y garantía de los derechos digitales."
+        },
+        {
+          "type": "h2",
+          "text": "3. ¿Qué son las cookies?"
+        },
+        {
+          "type": "p",
+          "text": "Las cookies son pequeños archivos que se descargan o almacenan en el dispositivo del usuario al acceder a determinados sitios web. Permiten, entre otras funciones, asegurar el funcionamiento técnico del sitio, recordar determinadas preferencias y, cuando se utilicen con consentimiento, obtener información sobre la navegación."
+        },
+        {
+          "type": "h2",
+          "text": "4. Cookies utilizadas"
+        },
+        {
+          "type": "p",
+          "text": "Este sitio web utiliza cookies técnicas necesarias para permitir su funcionamiento, mantener la seguridad, gestionar las preferencias del usuario y recordar, cuando proceda, las decisiones relativas al consentimiento de cookies."
+        },
+        {
+          "type": "p",
+          "text": "Las cookies técnicas estrictamente necesarias no requieren consentimiento."
+        },
+        {
+          "type": "p",
+          "text": "El sitio web no instalará cookies de análisis, publicidad, personalización no necesaria ni otras cookies de terceros antes de obtener el consentimiento del usuario, cuando dicho consentimiento resulte exigible."
+        },
+        {
+          "type": "h2",
+          "text": "5. Categorías de cookies"
+        },
+        {
+          "type": "p",
+          "text": "<strong>Cookies técnicas necesarias:</strong> permiten el funcionamiento básico, la seguridad, la navegación, la gestión de formularios y el almacenamiento de las preferencias de consentimiento."
+        },
+        {
+          "type": "p",
+          "text": "<strong>Cookies de preferencias:</strong> permiten recordar determinadas opciones del usuario, como el idioma seleccionado, cuando dicha función esté habilitada."
+        },
+        {
+          "type": "p",
+          "text": "<strong>Cookies de análisis o medición:</strong> permiten obtener información estadística sobre el uso del sitio web. Solo se utilizarán si están efectivamente instaladas y, cuando corresponda, después de obtener el consentimiento del usuario."
+        },
+        {
+          "type": "p",
+          "text": "<strong>Cookies de terceros:</strong> pueden ser instaladas por servicios externos integrados en el sitio web, como herramientas de reserva de citas (Microsoft Bookings). Al pulsar el botón «Seleccionar fecha y hora», el usuario es redirigido a la página externa de Microsoft Bookings; este sitio no carga dicho servicio de forma automática ni establece sus cookies."
+        },
+        {
+          "type": "h2",
+          "text": "6. Gestión del consentimiento"
+        },
+        {
+          "type": "p",
+          "text": "Al acceder al sitio web, el usuario podrá aceptar, rechazar o configurar las cookies no necesarias mediante el panel de consentimiento."
+        },
+        {
+          "type": "p",
+          "text": "La opción de rechazar las cookies se ofrece con una visibilidad y facilidad equivalentes a la opción de aceptarlas."
+        },
+        {
+          "type": "p",
+          "text": "Las cookies no necesarias permanecerán bloqueadas hasta que el usuario haya prestado su consentimiento."
+        },
+        {
+          "type": "p",
+          "text": "El usuario podrá modificar o retirar su consentimiento en cualquier momento mediante el enlace «Configuración de cookies», disponible de forma permanente en el pie de página."
+        },
+        {
+          "type": "h2",
+          "text": "7. Relación de cookies"
+        },
+        {
+          "type": "table",
+          "head": [
+            "Cookie",
+            "Proveedor",
+            "Finalidad",
+            "Duración"
+          ],
+          "rows": [
+            [
+              "Preferencia de consentimiento de cookies",
+              "Propia (almacenamiento local del navegador)",
+              "Recordar la decisión del usuario sobre cookies",
+              "Hasta que el usuario la elimine"
+            ]
+          ],
+          "note": "Esta tabla se ampliará si en el futuro se incorporan nuevas herramientas (por ejemplo, analítica) tras la correspondiente actualización de esta política."
+        },
+        {
+          "type": "h2",
+          "text": "8. Cookies de terceros"
+        },
+        {
+          "type": "p",
+          "text": "Cuando el sitio web incorpore o enlace a servicios de terceros, el usuario podrá consultar información adicional sobre sus cookies y tratamientos de datos en las políticas de dichos proveedores. La inclusión de un enlace externo no autoriza por sí sola la instalación previa de cookies no necesarias."
+        },
+        {
+          "type": "h2",
+          "text": "9. Eliminación mediante el navegador"
+        },
+        {
+          "type": "p",
+          "text": "El usuario también puede permitir, bloquear o eliminar cookies mediante la configuración de su navegador (por ejemplo, Chrome, Edge, Firefox o Safari). La desactivación de determinadas cookies técnicas puede afectar al funcionamiento correcto del sitio web."
+        },
+        {
+          "type": "h2",
+          "text": "10. Actualizaciones"
+        },
+        {
+          "type": "p",
+          "text": "Esta Política de Cookies podrá actualizarse cuando cambien las herramientas utilizadas, la configuración del sitio web o la normativa aplicable."
+        },
+        {
+          "type": "note",
+          "html": "<strong>¿Quiere cambiar su elección?</strong> Puede abrir el panel de configuración en cualquier momento desde el pie de página.<div style=\"margin-top:12px;\"><button class=\"btn btn-primary btn-sm\" data-cookie-open-prefs>Configuración de cookies</button></div>"
+        }
       ]
     }
   }

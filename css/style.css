@@ -299,6 +299,13 @@ table.rates tr:last-child td { border-bottom: none; }
   gap: 10px;
   margin: 24px 0 8px;
 }
+.quick-menu-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 24px 0 8px;
+}
+.quick-menu-rows .quick-menu { margin: 0; }
 .quick-menu a {
   background: var(--white);
   border: 1px solid var(--border);

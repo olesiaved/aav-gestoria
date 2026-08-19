@@ -6,9 +6,13 @@
       <span class="eyebrow">{{ page.eyebrow }}</span>
       <h1>{{ page.h1 }}</h1>
       <p class="lead">{{ page.lead }}</p>
-      <nav class="quick-menu" aria-label="{{ page.h1 }}">
-        {% for item in page.quick_menu %}
-        <a href="#{{ item.anchor }}">{{ item.label }}</a>
+      <nav class="quick-menu-rows" aria-label="{{ page.h1 }}">
+        {% for row in page.quick_menu %}
+        <div class="quick-menu">
+          {% for item in row %}
+          <a href="#{{ item.anchor }}">{{ item.label }}</a>
+          {% endfor %}
+        </div>
         {% endfor %}
       </nav>
     </div>
