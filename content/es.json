@@ -58,7 +58,7 @@
         "lead1": "Asesoramiento y gestión para empresas y particulares, con atención personalizada y sin desplazamientos innecesarios.",
         "lead2": "Nos ocupamos de sus obligaciones contables, fiscales y laborales para que usted pueda centrarse en su negocio.",
         "btn_freecall": "Reservar una llamada inicial gratuita",
-        "btn_consult": "Solicitar una consulta (50 €/hora)",
+        "btn_consult": "Solicitar una consulta (50 €/hora + IVA · 60,5 €)",
         "btn_services": "Ver servicios y tarifas",
         "note": "Gestión online · Atención en español y ruso · Honorarios transparentes"
       },
@@ -455,7 +455,7 @@
     },
     "contact": {
       "title": "Contacto — AAV Gestoría",
-      "description": "Contacte con AAV Gestoría: formulario de contacto, llamada inicial gratuita de 15 minutos o consulta de una hora (50 €). Valencia, atención online y presencial con cita previa.",
+      "description": "Contacte con AAV Gestoría: formulario de contacto, llamada inicial gratuita de 15 minutos o consulta de una hora (50 € + IVA · 60,5 €). Valencia, atención online y presencial con cita previa.",
       "eyebrow": "Contacto",
       "h1": "Hablemos de su caso",
       "lead": "Cuéntenos brevemente qué servicio necesita. Revisaremos su consulta y le indicaremos los siguientes pasos.",
@@ -470,7 +470,7 @@
         },
         {
           "anchor": "consulta",
-          "label": "Consulta de pago (50 €/hora)"
+          "label": "Consulta de pago (50 €/hora + IVA · 60,5 €)"
         }
       ],
       "general": {
@@ -544,7 +544,7 @@
         }
       },
       "consulta": {
-        "badge": "50 €/hora + IVA",
+        "badge": "50 €/hora + IVA (60,5 €)",
         "h2": "Solicitar una consulta",
         "subtitle": "Consulta profesional de una hora por videollamada o presencial. Complete sus datos de facturación para poder enviarle la reserva y las instrucciones de pago.",
         "labels": {
