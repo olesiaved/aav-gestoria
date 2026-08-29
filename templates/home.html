@@ -92,31 +92,30 @@
         </div>
       </div>
 
-      <div class="notify-strip">
-        <div class="notify-strip__head">
-          <span class="notify-strip__icon">🔔</span>
-          <div>
-            <span class="notify-strip__eyebrow">{{ page.featured.notify.eyebrow }}</span>
-            <p>{{ page.featured.notify.label }}</p>
-          </div>
-        </div>
-        <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
-              data-success="{{ page.featured.notify.success }}"
-              data-error="{{ page.featured.notify.error }}">
-          <input type="hidden" name="form_name" value="{{ page.featured.notify.form_name }}">
-          <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
-          <div class="notify-strip__row">
-            <div class="field" style="margin:0; flex:1; min-width:220px;">
-              <input type="email" name="email" placeholder="{{ page.featured.notify.placeholder }}" required>
+      <div class="resource-card resource-card--muted" style="margin-top:16px;">
+        <div class="resource-card__icon resource-card__icon--muted">🔔</div>
+        <div>
+          <span class="badge">{{ page.featured.notify.eyebrow }}</span>
+          <h3 style="margin-bottom:4px;">{{ page.featured.notify.title }}</h3>
+          <p class="subtitle" style="margin:0 0 14px;">{{ page.featured.notify.desc }}</p>
+          <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+                data-success="{{ page.featured.notify.success }}"
+                data-error="{{ page.featured.notify.error }}">
+            <input type="hidden" name="form_name" value="{{ page.featured.notify.form_name }}">
+            <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
+            <div class="notify-strip__row">
+              <div class="field" style="margin:0; flex:1; min-width:200px;">
+                <input type="email" name="email" placeholder="{{ page.featured.notify.placeholder }}" required>
+              </div>
+              <button type="submit" class="btn btn-navy btn-sm">{{ page.featured.notify.btn }}</button>
             </div>
-            <button type="submit" class="btn btn-navy">{{ page.featured.notify.btn }}</button>
-          </div>
-          <div class="checkbox-field notify-strip__consent">
-            <input type="checkbox" id="notify-privacidad" name="privacy_consent" required>
-            <label for="notify-privacidad">{{ page.featured.notify.privacy_pre }} <a href="{{ url_for('legal_privacidad') }}" target="_blank">{{ page.featured.notify.privacy_link_text }}</a>{{ page.featured.notify.privacy_post }}</label>
-          </div>
-          <div class="form-msg" role="status"></div>
-        </form>
+            <div class="checkbox-field notify-strip__consent">
+              <input type="checkbox" id="notify-privacidad" name="privacy_consent" required>
+              <label for="notify-privacidad">{{ page.featured.notify.privacy_pre }} <a href="{{ url_for('legal_privacidad') }}" target="_blank">{{ page.featured.notify.privacy_link_text }}</a>{{ page.featured.notify.privacy_post }}</label>
+            </div>
+            <div class="form-msg" role="status"></div>
+          </form>
+        </div>
       </div>
 
       <div class="cta-band" style="margin-top:40px;">
