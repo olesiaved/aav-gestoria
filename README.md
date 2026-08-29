@@ -77,14 +77,15 @@ the deployable files (`*.html`, `ru/`, `css/`, `js/`, `img/`, `files/`) into
 
 ### Deploying
 
-Two workflows handle this automatically:
+Deploys are manual, not automatic on push/merge/PR — nothing hits AWS
+without someone explicitly triggering it. Two workflows, both
+`workflow_dispatch`-only, run from the repo's Actions tab (pick the
+workflow → "Run workflow" → pick the branch):
 
-- **`.github/workflows/deploy.yml`** — every push to `main` runs
-  `sst deploy --stage production`. Also triggerable manually from the
-  Actions tab.
-- **`.github/workflows/deploy-dev.yml`** — every push to an open PR against
-  `main` runs `sst deploy --stage dev`, so you can click through the actual
-  change at `dev.aavgestoria.es` before merging. Also triggerable manually.
+- **`.github/workflows/deploy.yml`** — runs `sst deploy --stage production`.
+- **`.github/workflows/deploy-dev.yml`** — runs `sst deploy --stage dev`, so
+  you can click through a branch's changes at `dev.aavgestoria.es` before
+  merging.
 
 Both authenticate via the OIDC role above — no AWS keys stored in GitHub.
 You can also run either locally:
@@ -103,11 +104,10 @@ explicitly), so `production` must have been deployed at least once first. No
 extra registrar step needed — `dev.aavgestoria.es` resolves automatically
 once the zone's nameservers are in place.
 
-It's a single shared environment, not one per PR: whichever PR pushed most
-recently is what's live there (the `deploy-dev` workflow cancels
-in-progress runs when a newer one starts). Fine for one contributor at a
-time; if PRs start overlapping, ask me to switch this to a stage per PR
-(e.g. `pr-42`) instead.
+It's a single shared environment, not one per branch: whoever runs the
+`deploy-dev` workflow most recently is what's live there. Fine for one
+contributor at a time; if that starts causing collisions, ask me to switch
+this to a stage per branch/PR (e.g. `pr-42`) instead.
 
 Any other stage name (`npx sst deploy --stage <anything-else>`, or
 `npx sst dev` with no stage) gets no custom domain at all — just a throwaway
