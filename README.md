@@ -79,17 +79,34 @@ the deployable files (`*.html`, `ru/`, `css/`, `js/`, `img/`, `files/`) into
 
 Every push to `main` runs `.github/workflows/deploy.yml`, which builds the
 site and runs `sst deploy --stage production` using the OIDC role above — no
-AWS keys stored in GitHub. You can also trigger it manually from the Actions
-tab (`workflow_dispatch`), or run it locally:
+AWS keys stored in GitHub. You can also trigger a deploy manually from the
+Actions tab (`workflow_dispatch`, pick `production` or `dev`), or run it
+locally:
 
 ```bash
 npx sst deploy --stage production
 ```
 
-The custom domain (`aavgestoria.es` and `www.aavgestoria.es`), hosted zone,
-and deploy role are only created on the `production` stage — running
-`npx sst dev` (no stage flag) spins up a throwaway preview stage on a
-`*.sst.dev`-style URL for testing, without touching any of that.
+### Dev environment
+
+`dev` is a full mirror of production — its own S3 bucket, CloudFront
+distribution, and cert, served at `dev.aavgestoria.es` — for testing changes
+(especially backend changes, once those exist) against something real before
+they hit the live site:
+
+```bash
+npx sst deploy --stage dev
+```
+
+It reuses the Route 53 zone `production` already created (looked up by
+domain name, not passed explicitly), so `production` must have been deployed
+at least once first. No extra registrar step needed — `dev.aavgestoria.es`
+resolves automatically once the zone's nameservers are in place.
+
+Any other stage name (`npx sst deploy --stage <anything-else>`, or
+`npx sst dev` with no stage) gets no custom domain at all — just a throwaway
+CloudFront URL — so ad-hoc sandboxes don't pile up DNS records or fight over
+`dev`/`production`.
 
 To tear down a stage's AWS resources: `npx sst remove --stage <stage>`
 (the `production` stage is protected against accidental removal).

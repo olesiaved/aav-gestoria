@@ -12,7 +12,14 @@ export default $config({
   async run() {
     const domainName = "aavgestoria.es";
     const githubRepo = "olesiaved/aav-gestoria";
-    const isProd = $app.stage === "production";
+    const stage = $app.stage;
+    const isProd = stage === "production";
+    // "dev" mirrors production one-to-one, just under a subdomain, so it's
+    // a realistic environment to test backend changes against before they
+    // hit the real site. Other ad-hoc stages (personal sandboxes, PR
+    // previews) stay domain-less to avoid piling up DNS records.
+    const isDev = stage === "dev";
+    const hasDomain = isProd || isDev;
 
     // Created by SST rather than assumed to pre-exist. The domain itself is
     // registered elsewhere, so after the first deploy you still need to
@@ -70,13 +77,17 @@ export default $config({
         command: "bash infra/build-static.sh",
         output: "dist",
       },
-      // Only the production stage claims the real domain, so preview/dev
-      // stages don't fight over it or trigger extra cert validation.
-      domain: isProd
+      // production claims the apex + www; dev gets its own subdomain in the
+      // same zone. Other stages stay domain-less so ad-hoc stages don't
+      // pile up DNS records or fight over the real domain.
+      domain: hasDomain
         ? {
-            name: domainName,
-            redirects: [`www.${domainName}`],
-            dns: sst.aws.dns({ zone: zone!.zoneId }),
+            name: isProd ? domainName : `${stage}.${domainName}`,
+            redirects: isProd ? [`www.${domainName}`] : undefined,
+            // production created the zone above and passes it explicitly;
+            // dev looks it up by name since the zone already exists by
+            // then (production must be deployed at least once first).
+            dns: isProd ? sst.aws.dns({ zone: zone!.zoneId }) : sst.aws.dns(),
           }
         : undefined,
     });
