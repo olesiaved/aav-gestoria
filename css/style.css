@@ -368,10 +368,12 @@ table.rates tr:last-child td { border-bottom: none; }
   gap: 14px;
   height: fit-content;
 }
-.booking-panel h3 { color: var(--white); }
+.booking-panel h2, .booking-panel h3 { color: var(--white); }
 .booking-panel p { color: #C9CDD8; font-size: 0.92rem; margin-bottom: 4px; }
 .booking-panel .btn { margin-top: 8px; }
 .booking-panel small { color: #97A0B4; font-size: 0.78rem; }
+.booking-panel .badge { background: rgba(255,255,255,0.14); color: var(--white); }
+.booking-panel--standalone { max-width: 480px; margin: 0 auto; }
 
 .split {
   display: grid;

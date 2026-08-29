@@ -562,29 +562,8 @@
         "badge": "Gratuita",
         "h2": "Llamada inicial de 15 minutos",
         "subtitle": "Una breve toma de contacto para entender su caso y orientarle sobre los siguientes pasos, sin compromiso.",
-        "labels": {
-          "full_name": "Nombre y apellidos",
-          "email": "Correo electrónico",
-          "consult_type": "Tipo de consulta",
-          "motivo": "Describa brevemente el motivo de la consulta",
-          "privacy_pre": "He leído y acepto la",
-          "privacy_link_text": "Política de Privacidad",
-          "privacy_post": ".",
-          "submit": "Enviar datos"
-        },
-        "tipo_options": [
-          "Contabilidad y fiscalidad para empresas",
-          "Gestión laboral",
-          "Declaración de la Renta",
-          "Fiscalidad internacional",
-          "Modelos 720 y 721",
-          "Otro"
-        ],
-        "success": "Gracias. Ahora seleccione fecha y hora en el calendario para confirmar la llamada.",
-        "error": "No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.",
         "booking": {
-          "h3": "Reserve su llamada",
-          "p": "Después de enviar sus datos, elija el día y la hora que mejor le convengan.",
+          "p": "Elija el día y la hora que mejor le convengan en el calendario de reservas.",
           "btn": "Seleccionar fecha y hora",
           "note": "Al reservar una cita será redirigido a Microsoft Bookings, servicio externo sujeto a sus propias condiciones y política de privacidad."
         }
@@ -592,44 +571,11 @@
       "consulta": {
         "badge": "60,5 €/hora (IVA incluida)",
         "h2": "Solicitar una consulta",
-        "subtitle": "Consulta profesional de una hora por videollamada o presencial. Complete sus datos de facturación para poder enviarle la reserva y las instrucciones de pago.",
-        "labels": {
-          "full_name": "Nombre y apellidos / Razón social",
-          "billing_type": "¿La factura se emitirá a un particular o a una empresa?",
-          "billing_type_options": [
-            "Particular",
-            "Empresa"
-          ],
-          "tax_id": "DNI, NIE, NIF o CIF",
-          "fiscal_address": "Dirección fiscal",
-          "email": "Correo electrónico",
-          "phone": "Teléfono",
-          "country": "País de residencia fiscal",
-          "country_hint": "(cuando proceda)",
-          "consult_type": "Motivo de la consulta",
-          "motivo": "Describa brevemente el motivo de la consulta",
-          "privacy_pre": "He leído y acepto la",
-          "privacy_link_text": "Política de Privacidad",
-          "privacy_post": ".",
-          "submit": "Enviar datos"
-        },
-        "tipo_options": [
-          "Contabilidad y fiscalidad para empresas",
-          "Gestión laboral",
-          "Declaración de la Renta",
-          "Declaración de la Renta de No Residentes",
-          "Fiscalidad internacional",
-          "Modelos 720 y 721",
-          "Requerimiento o actuación ante la AEAT",
-          "Otro"
-        ],
-        "success": "Gracias. Ahora seleccione fecha y hora. Recibirá las instrucciones de pago por correo electrónico.",
-        "error": "No se pudo enviar el formulario. Escríbanos directamente a contact@aavgestoria.es.",
+        "subtitle": "Consulta profesional de una hora por videollamada o presencial.",
         "booking": {
-          "h3": "Reserve su consulta",
-          "p": "Después de enviar sus datos, elija el día y la hora. La cita se confirmará una vez recibido el pago.",
+          "p": "Elija el día y la hora que mejor le convengan en el calendario de reservas.",
           "btn": "Seleccionar fecha y hora",
-          "note": "Tras realizar la reserva, recibirá por correo electrónico las instrucciones de pago. La cita se confirmará una vez recibido el pago."
+          "note": "Tras realizar la reserva, recibirá por correo electrónico las instrucciones de pago; la cita se confirmará una vez recibido el pago. Al reservar será redirigido a Microsoft Bookings, servicio externo sujeto a sus propias condiciones y política de privacidad."
         }
       },
       "presencial": {

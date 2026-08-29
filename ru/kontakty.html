@@ -64,6 +64,7 @@
               data-success="Спасибо за обращение. Мы ответим вам в ближайшее время."
               data-error="Не удалось отправить форму. Напишите нам напрямую на contact@aavgestoria.es.">
           <input type="hidden" name="form_name" value="Форма обратной связи">
+          <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
           <div class="form-grid">
             <div class="field">
               <label for="c-nombre">Имя и фамилия *</label>
@@ -122,54 +123,13 @@
 
   <!-- Free call -->
   <section class="section section--alt" id="llamada-gratuita">
-    <div class="container split">
-      <div class="form-card">
+    <div class="container">
+      <div class="booking-panel booking-panel--standalone">
         <span class="badge badge--free">Бесплатно</span>
         <h2>Бесплатный звонок на 15 минут</h2>
-        <p class="subtitle">Короткое знакомство, чтобы понять вашу ситуацию и подсказать дальнейшие шаги, без каких-либо обязательств.</p>
-        <form data-ajax-form action="https://formspree.io/f/mbgrqkoz" method="POST"
-              data-success="Спасибо. Теперь выберите дату и время в календаре, чтобы подтвердить звонок."
-              data-error="Не удалось отправить форму. Напишите нам напрямую на contact@aavgestoria.es.">
-          <input type="hidden" name="form_name" value="Бесплатный звонок на 15 минут">
-          <div class="form-grid">
-            <div class="field">
-              <label for="lg-nombre">Имя и фамилия *</label>
-              <input type="text" id="lg-nombre" name="full_name" required>
-            </div>
-            <div class="field">
-              <label for="lg-email">Электронная почта *</label>
-              <input type="email" id="lg-email" name="email" required>
-            </div>
-            <div class="field field--full">
-              <label for="lg-tipo">Тип обращения *</label>
-              <select id="lg-tipo" name="consult_type" required>
-                <option value="">—</option>
-                <option>Бухгалтерия и налоги для компаний</option>
-                <option>Кадровое администрирование</option>
-                <option>Декларация о доходах</option>
-                <option>Международное налогообложение</option>
-                <option>Формы Modelo 720 и 721</option>
-                <option>Другое</option>
-              </select>
-            </div>
-            <div class="field field--full">
-              <label for="lg-motivo">Кратко опишите причину обращения *</label>
-              <textarea id="lg-motivo" name="reason" required></textarea>
-            </div>
-          </div>
-          <div class="checkbox-field">
-            <input type="checkbox" id="lg-privacidad" name="privacy_consent" required>
-            <label for="lg-privacidad">Я ознакомлен(а) и согласен(на) с <a href="politika-konfidencialnosti.html" target="_blank">Политикой конфиденциальности</a>.</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Отправить данные</button>
-          <div class="form-msg" role="status"></div>
-        </form>
-      </div>
-
-      <div class="booking-panel">
-        <h3>Запишитесь на звонок</h3>
-        <p>После отправки данных выберите удобные для вас день и время.</p>
-        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&ismsaljsauthenabled&ep=plink">Выбрать дату и время</a>
+        <p>Короткое знакомство, чтобы понять вашу ситуацию и подсказать дальнейшие шаги, без каких-либо обязательств.</p>
+        <p>Выберите удобные день и время в календаре бронирования.</p>
+        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/book/AAVGestoria@aavgestoria.es/?ismsaljsauthenabled">Выбрать дату и время</a>
         <small>При записи вы будете перенаправлены на Microsoft Bookings — внешний сервис, на который распространяются его собственные условия и политика конфиденциальности.</small>
       </div>
     </div>
@@ -177,81 +137,14 @@
 
   <!-- Paid consultation -->
   <section class="section" id="consulta">
-    <div class="container split">
-      <div class="form-card">
+    <div class="container">
+      <div class="booking-panel booking-panel--standalone">
         <span class="badge">60,5 €/час (с учётом IVA)</span>
         <h2>Заказать консультацию</h2>
-        <p class="subtitle">Часовая профессиональная консультация по видеосвязи или очно. Заполните данные для выставления счёта, чтобы мы могли отправить вам бронирование и инструкции по оплате.</p>
-        <form data-ajax-form action="https://formspree.io/f/mbgrqkoz" method="POST"
-              data-success="Спасибо. Теперь выберите дату и время. Инструкции по оплате придут на электронную почту."
-              data-error="Не удалось отправить форму. Напишите нам напрямую на contact@aavgestoria.es.">
-          <input type="hidden" name="form_name" value="Заказать консультацию">
-          <div class="form-grid">
-            <div class="field">
-              <label for="cs-nombre">Имя и фамилия / название компании *</label>
-              <input type="text" id="cs-nombre" name="billing_name" required>
-            </div>
-            <div class="field">
-              <label for="cs-tipo-factura">Счёт будет выставлен физическому лицу или компании? *</label>
-              <select id="cs-tipo-factura" name="billing_type" required>
-                <option value="">—</option>
-                <option>Физическое лицо</option>
-                <option>Компания</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="cs-nif">DNI, NIE, NIF или CIF *</label>
-              <input type="text" id="cs-nif" name="tax_id" required>
-            </div>
-            <div class="field">
-              <label for="cs-direccion">Юридический/налоговый адрес *</label>
-              <input type="text" id="cs-direccion" name="fiscal_address" required>
-            </div>
-            <div class="field">
-              <label for="cs-email">Электронная почта *</label>
-              <input type="email" id="cs-email" name="email" required>
-            </div>
-            <div class="field">
-              <label for="cs-tel">Телефон *</label>
-              <input type="tel" id="cs-tel" name="phone" required>
-            </div>
-            <div class="field">
-              <label for="cs-pais">Страна налогового резидентства <span class="hint" style="display:inline;">(если применимо)</span></label>
-              <input type="text" id="cs-pais" name="country">
-            </div>
-            <div class="field">
-              <label for="cs-tipo">Причина обращения *</label>
-              <select id="cs-tipo" name="consult_type" required>
-                <option value="">—</option>
-                <option>Бухгалтерия и налоги для компаний</option>
-                <option>Кадровое администрирование</option>
-                <option>Декларация о доходах</option>
-                <option>Декларация о доходах для нерезидентов</option>
-                <option>Международное налогообложение</option>
-                <option>Формы Modelo 720 и 721</option>
-                <option>Запрос или обращение в AEAT</option>
-                <option>Другое</option>
-              </select>
-            </div>
-            <div class="field field--full">
-              <label for="cs-motivo">Кратко опишите причину обращения *</label>
-              <textarea id="cs-motivo" name="reason" required></textarea>
-            </div>
-          </div>
-          <div class="checkbox-field">
-            <input type="checkbox" id="cs-privacidad" name="privacy_consent" required>
-            <label for="cs-privacidad">Я ознакомлен(а) и согласен(на) с <a href="politika-konfidencialnosti.html" target="_blank">Политикой конфиденциальности</a>.</label>
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Отправить данные</button>
-          <div class="form-msg" role="status"></div>
-        </form>
-      </div>
-
-      <div class="booking-panel">
-        <h3>Запишитесь на консультацию</h3>
-        <p>После отправки данных выберите день и время. Встреча будет подтверждена после получения оплаты.</p>
-        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/bookwithme/user/35a5c7fb564d45c6875226e5be5f173c@aavgestoria.es?anonymous&ismsaljsauthenabled&ep=plink">Выбрать дату и время</a>
-        <small>После бронирования вы получите инструкции по оплате на электронную почту. Встреча будет подтверждена после получения оплаты.</small>
+        <p>Часовая профессиональная консультация по видеосвязи или очно.</p>
+        <p>Выберите удобные день и время в календаре бронирования.</p>
+        <a class="btn btn-primary btn-block" data-booking-link href="https://outlook.office.com/book/AAVGestoria@aavgestoria.es/?ismsaljsauthenabled">Выбрать дату и время</a>
+        <small>После бронирования вы получите инструкции по оплате на электронную почту; встреча будет подтверждена после получения оплаты. При записи вы будете перенаправлены на Microsoft Bookings — внешний сервис, на который распространяются его собственные условия и политика конфиденциальности.</small>
       </div>
     </div>
   </section>
