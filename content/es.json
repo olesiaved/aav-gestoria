@@ -55,6 +55,7 @@
       "description": "Gestoría online especializada en contabilidad, fiscalidad y gestión laboral para empresas y particulares. Atención personalizada en español y ruso, honorarios transparentes.",
       "hero": {
         "h1": "Gestoría online especializada en contabilidad, fiscalidad y gestión laboral",
+        "secondary": "Además, gestionamos trámites de extranjería, nacionalidad, tráfico y constitución de sociedades.",
         "lead1": "Asesoramiento y gestión para empresas y particulares, con atención personalizada y sin desplazamientos innecesarios.",
         "lead2": "Nos ocupamos de sus obligaciones contables, fiscales y laborales para que usted pueda centrarse en su negocio.",
         "btn_freecall": "Reservar una llamada inicial gratuita",
@@ -83,6 +84,12 @@
             "desc": "Declaración de la Renta, inmuebles, inversiones, rentas internacionales y modelos 720 y 721.",
             "btn": "Ver servicios fiscales para particulares",
             "anchor": "renta"
+          },
+          {
+            "title": "Otros trámites y servicios",
+            "desc": "Extranjería · Nacionalidad · Tráfico · Sociedades y trámites mercantiles",
+            "btn": "Ver otros trámites y servicios",
+            "anchor": "otros-tramites"
           }
         ]
       },
@@ -163,6 +170,12 @@
           {
             "anchor": "modelos",
             "label": "Modelos y actuaciones adicionales"
+          }
+        ],
+        [
+          {
+            "anchor": "otros-tramites",
+            "label": "Otros trámites y servicios"
           }
         ]
       ],
@@ -394,6 +407,39 @@
           ]
         ],
         "note": "Los precios indicados corresponden al alcance estándar descrito. Cuando el asunto presente un mayor volumen o complejidad, se comunicará previamente el presupuesto correspondiente, sin iniciar ningún trabajo adicional sin la aceptación del cliente."
+      },
+      "s8": {
+        "h2": "8. Otros trámites y servicios",
+        "table_head": [
+          "Servicio",
+          "Honorarios"
+        ],
+        "rows": [
+          [
+            "Extranjería",
+            "Según trámite"
+          ],
+          [
+            "Nacionalidad",
+            "Según trámite"
+          ],
+          [
+            "Tráfico y vehículos",
+            "Según trámite"
+          ],
+          [
+            "Constitución de sociedades",
+            "Presupuesto personalizado"
+          ],
+          [
+            "Gestiones mercantiles y registrales",
+            "Según actuación"
+          ],
+          [
+            "Otros trámites administrativos",
+            "Presupuesto personalizado"
+          ]
+        ]
       },
       "conditions": {
         "h2": "Condiciones generales de los precios",

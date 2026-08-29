@@ -136,7 +136,23 @@
     </div>
   </section>
 
-  <section class="section section--alt">
+  <section class="section section--alt" id="otros-tramites">
+    <div class="container">
+      <h2>{{ page.s8.h2 }}</h2>
+      <div class="table-wrap">
+        <table class="rates">
+          <thead><tr><th>{{ page.s8.table_head[0] }}</th><th>{{ page.s8.table_head[1] }}</th></tr></thead>
+          <tbody>
+            {% for row in page.s8.rows %}
+            <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container">
       <h2>{{ page.conditions.h2 }}</h2>
       <ul>
