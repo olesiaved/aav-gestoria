@@ -427,6 +427,16 @@ table.rates tr:last-child td { border-bottom: none; }
 }
 .resource-card__actions { display: flex; flex-direction: column; gap: 10px; }
 .resource-card--premium { border-color: var(--border); background: var(--bg); }
+.notify-strip {
+  margin-top: 14px;
+  padding: 16px 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.notify-strip p { margin: 0 0 10px; color: var(--subtitle); font-size: 0.9rem; }
+.notify-strip__form { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px; }
+.notify-strip__form .form-msg { flex-basis: 100%; margin-top: 4px; }
 .price-tag { font-weight: 600; color: var(--burgundy); font-size: 1.05rem; }
 .badge {
   display: inline-block;

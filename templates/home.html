@@ -92,6 +92,21 @@
         </div>
       </div>
 
+      <div class="notify-strip">
+        <p>{{ page.featured.notify.label }}</p>
+        <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+              data-success="{{ page.featured.notify.success }}"
+              data-error="{{ page.featured.notify.error }}">
+          <input type="hidden" name="form_name" value="{{ page.featured.notify.form_name }}">
+          <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
+          <div class="field" style="margin:0; flex:1; min-width:220px;">
+            <input type="email" name="email" placeholder="{{ page.featured.notify.placeholder }}" required>
+          </div>
+          <button type="submit" class="btn btn-ghost btn-sm">{{ page.featured.notify.btn }}</button>
+          <div class="form-msg" role="status"></div>
+        </form>
+      </div>
+
       <div class="cta-band" style="margin-top:40px;">
         <h2>{{ page.featured.cta.h2 }}</h2>
         <p>{{ page.featured.cta.p }}</p>

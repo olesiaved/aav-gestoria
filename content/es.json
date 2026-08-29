@@ -124,6 +124,14 @@
           "desc": "Presentación descargable con los puntos clave: modelos 720 y 721, cuentas y activos en el extranjero, y errores habituales a evitar.",
           "btn_download": "Descargar presentación en PDF"
         },
+        "notify": {
+          "label": "¿Quiere que le avisemos cuando publiquemos nuevas guías y materiales?",
+          "placeholder": "Su correo electrónico",
+          "btn": "Avísenme",
+          "form_name": "Aviso de nuevos materiales",
+          "success": "Gracias, le avisaremos cuando publiquemos nuevos materiales.",
+          "error": "No se pudo enviar. Inténtelo de nuevo o escríbanos a contact@aavgestoria.es."
+        },
         "cta": {
           "h2": "¿Tiene dudas sobre bienes, inversiones o rentas en el extranjero?",
           "p": "Podemos revisar su caso y las obligaciones fiscales e informativas aplicables.",
