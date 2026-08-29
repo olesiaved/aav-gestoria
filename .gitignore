@@ -1,1 +1,6 @@
 assets/WEB.xlsx
+
+# SST / deploy tooling
+node_modules/
+.sst/
+dist/
