@@ -1,0 +1,13 @@
+{
+  "name": "aav-gestoria",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sst dev",
+    "deploy": "sst deploy --stage production",
+    "remove": "sst remove --stage production"
+  },
+  "devDependencies": {
+    "sst": "^3"
+  }
+}
