@@ -154,16 +154,28 @@
       </div>
 
       <div class="notify-strip">
-        <p>¿Quiere que le avisemos cuando publiquemos nuevas guías y materiales?</p>
+        <div class="notify-strip__head">
+          <span class="notify-strip__icon">🔔</span>
+          <div>
+            <span class="notify-strip__eyebrow">Próximamente</span>
+            <p>¿Quiere que le avisemos cuando publiquemos nuevas guías y materiales?</p>
+          </div>
+        </div>
         <form class="notify-strip__form" data-ajax-form action="https://formspree.io/f/mbgrqkoz" method="POST"
               data-success="Gracias, le avisaremos cuando publiquemos nuevos materiales."
               data-error="No se pudo enviar. Inténtelo de nuevo o escríbanos a contact@aavgestoria.es.">
           <input type="hidden" name="form_name" value="Aviso de nuevos materiales">
           <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
-          <div class="field" style="margin:0; flex:1; min-width:220px;">
-            <input type="email" name="email" placeholder="Su correo electrónico" required>
+          <div class="notify-strip__row">
+            <div class="field" style="margin:0; flex:1; min-width:220px;">
+              <input type="email" name="email" placeholder="Su correo electrónico" required>
+            </div>
+            <button type="submit" class="btn btn-navy">Avísenme</button>
           </div>
-          <button type="submit" class="btn btn-ghost btn-sm">Avísenme</button>
+          <div class="checkbox-field notify-strip__consent">
+            <input type="checkbox" id="notify-privacidad" name="privacy_consent" required>
+            <label for="notify-privacidad">He leído y acepto la <a href="politica-de-privacidad.html" target="_blank">Política de Privacidad</a>.</label>
+          </div>
           <div class="form-msg" role="status"></div>
         </form>
       </div>

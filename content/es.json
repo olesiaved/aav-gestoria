@@ -125,10 +125,14 @@
           "btn_download": "Descargar presentación en PDF"
         },
         "notify": {
+          "eyebrow": "Próximamente",
           "label": "¿Quiere que le avisemos cuando publiquemos nuevas guías y materiales?",
           "placeholder": "Su correo electrónico",
           "btn": "Avísenme",
           "form_name": "Aviso de nuevos materiales",
+          "privacy_pre": "He leído y acepto la",
+          "privacy_link_text": "Política de Privacidad",
+          "privacy_post": ".",
           "success": "Gracias, le avisaremos cuando publiquemos nuevos materiales.",
           "error": "No se pudo enviar. Inténtelo de nuevo o escríbanos a contact@aavgestoria.es."
         },

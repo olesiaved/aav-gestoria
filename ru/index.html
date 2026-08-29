@@ -134,16 +134,28 @@
       </div>
 
       <div class="notify-strip">
-        <p>Хотите, чтобы мы сообщали вам о новых гайдах и материалах?</p>
+        <div class="notify-strip__head">
+          <span class="notify-strip__icon">🔔</span>
+          <div>
+            <span class="notify-strip__eyebrow">Скоро</span>
+            <p>Хотите, чтобы мы сообщали вам о новых гайдах и материалах?</p>
+          </div>
+        </div>
         <form class="notify-strip__form" data-ajax-form action="https://formspree.io/f/mbgrqkoz" method="POST"
               data-success="Спасибо! Мы сообщим вам, когда выйдут новые материалы."
               data-error="Не удалось отправить. Попробуйте ещё раз или напишите на contact@aavgestoria.es.">
           <input type="hidden" name="form_name" value="Подписка на новые материалы">
           <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
-          <div class="field" style="margin:0; flex:1; min-width:220px;">
-            <input type="email" name="email" placeholder="Ваш email" required>
+          <div class="notify-strip__row">
+            <div class="field" style="margin:0; flex:1; min-width:220px;">
+              <input type="email" name="email" placeholder="Ваш email" required>
+            </div>
+            <button type="submit" class="btn btn-navy">Уведомить меня</button>
           </div>
-          <button type="submit" class="btn btn-ghost btn-sm">Уведомить меня</button>
+          <div class="checkbox-field notify-strip__consent">
+            <input type="checkbox" id="notify-privacidad" name="privacy_consent" required>
+            <label for="notify-privacidad">Я ознакомлен(а) и согласен(на) с <a href="politika-konfidencialnosti.html" target="_blank">Политикой конфиденциальности</a>.</label>
+          </div>
           <div class="form-msg" role="status"></div>
         </form>
       </div>
