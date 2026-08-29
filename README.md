@@ -60,26 +60,44 @@ the deployable files (`*.html`, `ru/`, `css/`, `js/`, `img/`, `files/`) into
    ```bash
    npm install
    ```
-3. **Deploy** (see below). On first deploy, SST creates the Route 53 hosted
-   zone and prints its 4 nameservers as the `zoneNameServers` output.
-4. **Point your registrar at it**: copy those 4 nameservers into your
-   domain's DNS/nameserver settings at your registrar (Namecheap, GoDaddy,
-   etc.). This is the one step that can't be automated from AWS — it happens
-   on a different company's system. Once propagated (can take a few hours),
+3. **Deploy once from your machine** (see below). This first run creates the
+   Route 53 hosted zone, S3/CloudFront/ACM, and a GitHub OIDC deploy role,
+   and prints two outputs you need:
+   - `zoneNameServers` — the 4 Route 53 nameservers.
+   - `githubDeployRoleArn` — the IAM role GitHub Actions will assume.
+4. **Point your registrar at it**: copy the 4 nameservers into your domain's
+   DNS/nameserver settings at your registrar (Namecheap, GoDaddy, etc.). This
+   is the one step that can't be automated from AWS — it happens on a
+   different company's system. Once propagated (can take a few hours),
    re-run the deploy and SST/ACM will finish validating the certificate
    automatically.
+5. **Wire up CI**: in the repo's GitHub Settings → Secrets and variables →
+   Actions, add a repository secret `AWS_DEPLOY_ROLE_ARN` set to the
+   `githubDeployRoleArn` output from step 3.
 
 ### Deploying
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the
+site and runs `sst deploy --stage production` using the OIDC role above — no
+AWS keys stored in GitHub. You can also trigger it manually from the Actions
+tab (`workflow_dispatch`), or run it locally:
 
 ```bash
 npx sst deploy --stage production
 ```
 
-This builds the site, uploads it to S3, and updates CloudFront + DNS. The
-custom domain (`aavgestoria.es` and `www.aavgestoria.es`) is only attached on
-the `production` stage — running `npx sst dev` (no stage flag) spins up a
-throwaway preview stage on a `*.sst.dev`-style URL for testing, without
-touching the real domain or creating a second hosted zone.
+The custom domain (`aavgestoria.es` and `www.aavgestoria.es`), hosted zone,
+and deploy role are only created on the `production` stage — running
+`npx sst dev` (no stage flag) spins up a throwaway preview stage on a
+`*.sst.dev`-style URL for testing, without touching any of that.
 
 To tear down a stage's AWS resources: `npx sst remove --stage <stage>`
 (the `production` stage is protected against accidental removal).
+
+Note: the GitHub deploy role is granted `AdministratorAccess` for now, since
+scoping it down requires knowing every service the (still-growing) backend
+will touch. Worth tightening once the backend's shape is settled. Also, an
+AWS account can only have one GitHub OIDC provider — if this account already
+has one (from another project), the first deploy will fail on that resource;
+tell me and I'll adjust the config to reuse the existing provider instead of
+creating a new one.
