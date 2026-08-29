@@ -43,8 +43,9 @@ After rebuilding, commit both the source changes (templates/content) and the reg
 ## Hosting on AWS (SST)
 
 The site is deployed to AWS via [SST](https://sst.dev) (`sst.config.ts`), which
-provisions S3 + CloudFront + an ACM certificate and points them at
-`aavgestoria.es`. `infra/build-static.sh` rebuilds the HTML and assembles just
+provisions a Route 53 hosted zone, S3 + CloudFront, and an ACM certificate,
+and points them at `aavgestoria.es` — all as code, nothing clicked by hand in
+the AWS console. `infra/build-static.sh` rebuilds the HTML and assembles just
 the deployable files (`*.html`, `ru/`, `css/`, `js/`, `img/`, `files/`) into
 `dist/`, which is what actually gets uploaded — source-only files
 (`templates/`, `content/`, `build.py`) never reach S3.
@@ -53,17 +54,20 @@ the deployable files (`*.html`, `ru/`, `css/`, `js/`, `img/`, `files/`) into
 
 1. **AWS account**: install the AWS CLI and configure credentials for an IAM
    user/role with permissions to manage S3, CloudFront, ACM, Route 53, and
-   IAM (`aws configure`, or an SSO profile).
-2. **DNS**: this project expects the domain's DNS to be hosted on Route 53.
-   In the Route 53 console, create a public hosted zone for `aavgestoria.es`,
-   then update the domain's nameservers at your registrar (Namecheap,
-   GoDaddy, etc.) to the 4 NS records Route 53 gives you. DNS propagation can
-   take a few hours; SST/ACM cert validation will wait for it automatically
-   on first deploy.
-3. **Install deploy tooling**:
+   IAM (`aws configure`, or an SSO profile). This is the one prerequisite SST
+   can't set up for you — some AWS credential has to authorize the deploy.
+2. **Install deploy tooling**:
    ```bash
    npm install
    ```
+3. **Deploy** (see below). On first deploy, SST creates the Route 53 hosted
+   zone and prints its 4 nameservers as the `zoneNameServers` output.
+4. **Point your registrar at it**: copy those 4 nameservers into your
+   domain's DNS/nameserver settings at your registrar (Namecheap, GoDaddy,
+   etc.). This is the one step that can't be automated from AWS — it happens
+   on a different company's system. Once propagated (can take a few hours),
+   re-run the deploy and SST/ACM will finish validating the certificate
+   automatically.
 
 ### Deploying
 
@@ -75,7 +79,7 @@ This builds the site, uploads it to S3, and updates CloudFront + DNS. The
 custom domain (`aavgestoria.es` and `www.aavgestoria.es`) is only attached on
 the `production` stage — running `npx sst dev` (no stage flag) spins up a
 throwaway preview stage on a `*.sst.dev`-style URL for testing, without
-touching the real domain.
+touching the real domain or creating a second hosted zone.
 
 To tear down a stage's AWS resources: `npx sst remove --stage <stage>`
 (the `production` stage is protected against accidental removal).
