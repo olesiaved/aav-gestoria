@@ -1,0 +1,196 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Account cost guardrail for aav-gestoria. Emails at $5 and $10 of monthly
+  spend; at $15 it also disables every CloudFront distribution in the
+  account (the one cost on a static site that can run away). Deploy this
+  stack in us-east-1 — AWS Budgets and its SNS target are global services
+  pinned to that region.
+
+Parameters:
+  AlertEmail1:
+    Type: String
+    Default: lesyaved239@gmail.com
+  AlertEmail2:
+    Type: String
+    Default: ithanvelreq@gmail.com
+  AlertEmail3:
+    Type: String
+    Default: aaved78@gmail.com
+  WarnThreshold1:
+    Type: Number
+    Default: 5
+    Description: First email alert, in USD of actual month-to-date spend.
+  WarnThreshold2:
+    Type: Number
+    Default: 10
+    Description: Second email alert, in USD.
+  CutThreshold:
+    Type: Number
+    Default: 15
+    Description: >
+      Email + auto-disable CloudFront, in USD. AWS refreshes cost data only
+      a few times a day, so real spend when this fires can be somewhat
+      higher than the number here.
+
+Resources:
+  # SNS topic that the $15 budget notification publishes to; the Lambda
+  # below is its only subscriber.
+  CostGuardTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: cost-guardrail-actions
+
+  # AWS Budgets publishes notifications from the budgets.amazonaws.com
+  # service principal, so the topic has to let it in explicitly.
+  CostGuardTopicPolicy:
+    Type: AWS::SNS::TopicPolicy
+    Properties:
+      Topics:
+        - !Ref CostGuardTopic
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Sid: AllowBudgetsPublish
+            Effect: Allow
+            Principal:
+              Service: budgets.amazonaws.com
+            Action: sns:Publish
+            Resource: !Ref CostGuardTopic
+            Condition:
+              StringEquals:
+                aws:SourceAccount: !Ref AWS::AccountId
+              ArnLike:
+                aws:SourceArn: !Sub "arn:aws:budgets::${AWS::AccountId}:budget/*"
+
+  CostGuardBudget:
+    Type: AWS::Budgets::Budget
+    DependsOn: CostGuardTopicPolicy
+    Properties:
+      Budget:
+        BudgetName: cost-guardrail-monthly
+        BudgetType: COST
+        TimeUnit: MONTHLY
+        BudgetLimit:
+          Amount: !Ref CutThreshold
+          Unit: USD
+      NotificationsWithSubscribers:
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: !Ref WarnThreshold1
+            ThresholdType: ABSOLUTE_VALUE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail1
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail2
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail3
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: !Ref WarnThreshold2
+            ThresholdType: ABSOLUTE_VALUE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail1
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail2
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail3
+        - Notification:
+            NotificationType: ACTUAL
+            ComparisonOperator: GREATER_THAN
+            Threshold: !Ref CutThreshold
+            ThresholdType: ABSOLUTE_VALUE
+          Subscribers:
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail1
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail2
+            - SubscriptionType: EMAIL
+              Address: !Ref AlertEmail3
+            - SubscriptionType: SNS
+              Address: !Ref CostGuardTopic
+
+  DisableCloudFrontRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: disable-cloudfront
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cloudfront:ListDistributions
+                  - cloudfront:GetDistributionConfig
+                  - cloudfront:UpdateDistribution
+                Resource: "*"
+
+  DisableCloudFrontFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: cost-guardrail-disable-cloudfront
+      Runtime: python3.12
+      Handler: index.handler
+      Timeout: 120
+      Role: !GetAtt DisableCloudFrontRole.Arn
+      Code:
+        ZipFile: |
+          import boto3
+
+          cf = boto3.client("cloudfront")
+
+
+          def handler(event, context):
+              disabled = []
+              already_off = []
+              for page in cf.get_paginator("list_distributions").paginate():
+                  dist_list = page.get("DistributionList") or {}
+                  for item in dist_list.get("Items") or []:
+                      dist_id = item["Id"]
+                      if not item.get("Enabled", False):
+                          already_off.append(dist_id)
+                          continue
+                      cfg = cf.get_distribution_config(Id=dist_id)
+                      body = cfg["DistributionConfig"]
+                      body["Enabled"] = False
+                      cf.update_distribution(
+                          Id=dist_id, IfMatch=cfg["ETag"], DistributionConfig=body
+                      )
+                      disabled.append(dist_id)
+              print(f"disabled={disabled} already_off={already_off}")
+              return {"disabled": disabled, "already_off": already_off}
+
+  DisableCloudFrontInvokePermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      FunctionName: !GetAtt DisableCloudFrontFunction.Arn
+      Action: lambda:InvokeFunction
+      Principal: sns.amazonaws.com
+      SourceArn: !Ref CostGuardTopic
+
+  DisableCloudFrontSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref CostGuardTopic
+      Protocol: lambda
+      Endpoint: !GetAtt DisableCloudFrontFunction.Arn
+
+Outputs:
+  BudgetName:
+    Value: cost-guardrail-monthly
+  ActionTopicArn:
+    Value: !Ref CostGuardTopic
+  DisableFunctionName:
+    Value: !Ref DisableCloudFrontFunction
