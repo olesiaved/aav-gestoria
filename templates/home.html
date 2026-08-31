@@ -88,7 +88,7 @@
         </div>
         <div class="resource-card__actions">
           <a class="btn btn-primary btn-sm" href="{{ asset('files/fiscalidad-activos-en-el-extranjero.pdf') }}" download
-             data-track-download="{{ shared.form_endpoint }}" data-track-file="fiscalidad-activos-en-el-extranjero.pdf">{{ page.featured.free.btn_download }}</a>
+             data-track-download="{{ shared.form_endpoint_silent }}" data-track-file="fiscalidad-activos-en-el-extranjero.pdf">{{ page.featured.free.btn_download }}</a>
         </div>
       </div>
 
@@ -98,11 +98,11 @@
           <span class="badge">{{ page.featured.notify.eyebrow }}</span>
           <h3 style="margin-bottom:4px;">{{ page.featured.notify.title }}</h3>
           <p class="subtitle" style="margin:0 0 14px;">{{ page.featured.notify.desc }}</p>
-          <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
+          <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint_silent }}" method="POST"
                 data-success="{{ page.featured.notify.success }}"
                 data-error="{{ page.featured.notify.error }}">
+            <input type="hidden" name="entry_type" value="subscription">
             <input type="hidden" name="form_name" value="{{ page.featured.notify.form_name }}">
-            <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
             <div class="notify-strip__row">
               <div class="field" style="margin:0; flex:1; min-width:200px;">
                 <input type="email" name="email" placeholder="{{ page.featured.notify.placeholder }}" required>
