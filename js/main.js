@@ -189,7 +189,8 @@
       var endpoint = link.getAttribute("data-track-download");
       if (!endpoint || endpoint.indexOf("YOUR_FORM_ID") !== -1) return;
       var payload = new FormData();
-      payload.append("form_name", "PDF descargado");
+      payload.append("entry_type", "pdf_download");
+      payload.append("form_name", "PDF ha sido descargado");
       payload.append("file", link.getAttribute("data-track-file") || link.href);
       payload.append("page_url", window.location.href);
       payload.append("timestamp", new Date().toISOString());

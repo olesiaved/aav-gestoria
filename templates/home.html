@@ -101,8 +101,8 @@
           <form class="notify-strip__form" data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
                 data-success="{{ page.featured.notify.success }}"
                 data-error="{{ page.featured.notify.error }}">
+            <input type="hidden" name="entry_type" value="subscription">
             <input type="hidden" name="form_name" value="{{ page.featured.notify.form_name }}">
-            <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
             <div class="notify-strip__row">
               <div class="field" style="margin:0; flex:1; min-width:200px;">
                 <input type="email" name="email" placeholder="{{ page.featured.notify.placeholder }}" required>

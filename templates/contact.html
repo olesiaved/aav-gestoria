@@ -22,6 +22,7 @@
         <form data-ajax-form action="{{ shared.form_endpoint }}" method="POST"
               data-success="{{ page.general.success }}"
               data-error="{{ page.general.error }}">
+          <input type="hidden" name="entry_type" value="contact">
           <input type="hidden" name="form_name" value="{{ page.general.h2 }}">
           <input type="hidden" name="_cc" value="lesyaved239@gmail.com">
           <div class="form-grid">
