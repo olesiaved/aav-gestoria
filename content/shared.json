@@ -4,7 +4,6 @@
   "phone_display": "+34 615 50 50 70",
   "booking_url": "https://outlook.office.com/book/AAVGestoria@aavgestoria.es/?ismsaljsauthenabled",
   "form_endpoint": "https://formspree.io/f/mbgrqkoz",
-  "form_endpoint_silent": "https://formspree.io/f/YOUR_SILENT_FORM_ID",
   "site_url": "https://aavgestoria.es/",
   "logo_url": "https://aavgestoria.es/img/logo-large.png",
   "street_address": "Calle Filólogo Sanelo 3",
