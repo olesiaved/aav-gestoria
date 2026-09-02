@@ -8,9 +8,24 @@
 <link rel="canonical" href="{{ canonical_url }}">
 <link rel="alternate" hreflang="es" href="{{ hreflang_es }}">
 <link rel="alternate" hreflang="ru" href="{{ hreflang_ru }}">
+<link rel="alternate" hreflang="x-default" href="{{ hreflang_es }}">
 <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
 <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AAV Gestoría">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:image" content="{{ shared.site_url }}img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ 'es_ES' if lang == 'es' else 'ru_RU' }}">
+<meta property="og:locale:alternate" content="{{ 'ru_RU' if lang == 'es' else 'es_ES' }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ shared.site_url }}img/og-image.png">
 {% block extra_head %}{% endblock %}
 </head>
 <body>
