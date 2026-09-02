@@ -4,21 +4,36 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "AccountingService"],
+  "@id": "{{ shared.site_url }}#business",
   "name": "AAV Gestoría",
+  "description": "{{ page.description }}",
   "image": "{{ shared.logo_url }}",
+  "logo": "{{ shared.logo_url }}",
   "url": "{{ shared.site_url }}",
   "email": "{{ shared.email }}",
   "telephone": "{{ shared.phone_tel }}",
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "{{ shared.street_address }}",
     "postalCode": "{{ shared.postal_code }}",
     "addressLocality": "{{ shared.address_locality }}",
+    "addressRegion": "Comunidad Valenciana",
     "addressCountry": "{{ shared.address_country }}"
   },
-  "areaServed": "ES",
-  "founder": { "@type": "Person", "name": "{{ shared.founder_name }}" }
+  "areaServed": [
+    { "@type": "City", "name": "Valencia" },
+    { "@type": "Country", "name": "España" }
+  ],
+  "knowsLanguage": ["es", "ru"],
+  "founder": { "@type": "Person", "name": "{{ shared.founder_name }}" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "10:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "17:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "15:00" }
+  ]
 }
 </script>
 {% endif %}

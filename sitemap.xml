@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://aavgestoria.es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/servicios-y-tarifas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/servicios-y-tarifas.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/uslugi-i-tarify.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/servicios-y-tarifas.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/uslugi-i-tarify.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/servicios-y-tarifas.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/uslugi-i-tarify.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/servicios-y-tarifas.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/sobre-mi.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/o-nas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/sobre-mi.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/o-nas.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/sobre-mi.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/o-nas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/sobre-mi.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/kontakty.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/contacto.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/kontakty.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/kontakty.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/contacto.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/aviso-legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/yuridicheskaya-informacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/aviso-legal.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/yuridicheskaya-informacion.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/aviso-legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/yuridicheskaya-informacion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/aviso-legal.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/politica-de-privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/politica-de-privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/politika-konfidencialnosti.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/politica-de-privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/politika-konfidencialnosti.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/politica-de-privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/politika-konfidencialnosti.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/politica-de-privacidad.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/politica-de-cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/politica-de-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/politika-cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/politica-de-cookies.html"/>
+  </url>
+  <url>
+    <loc>https://aavgestoria.es/ru/politika-cookie.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aavgestoria.es/politica-de-cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://aavgestoria.es/ru/politika-cookie.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aavgestoria.es/politica-de-cookies.html"/>
+  </url>
+</urlset>

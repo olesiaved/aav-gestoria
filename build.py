@@ -116,6 +116,41 @@ def build():
     for p in written:
         print(" -", p)
 
+    build_sitemap()
+    build_robots()
+    print("Wrote sitemap.xml and robots.txt")
+
+
+def build_sitemap():
+    """Write sitemap.xml listing every page in both languages, with hreflang alternates."""
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    ]
+    for cfg in PAGES.values():
+        es_url = abs_url(cfg["es"])
+        ru_url = abs_url(cfg["ru"])
+        for loc in (es_url, ru_url):
+            lines.append("  <url>")
+            lines.append(f"    <loc>{loc}</loc>")
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="es" href="{es_url}"/>')
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="ru" href="{ru_url}"/>')
+            lines.append(f'    <xhtml:link rel="alternate" hreflang="x-default" href="{es_url}"/>')
+            lines.append("  </url>")
+    lines.append("</urlset>")
+    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def build_robots():
+    """Write robots.txt: allow everything, point crawlers at the sitemap."""
+    (ROOT / "robots.txt").write_text(
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        f"Sitemap: {SITE_BASE}sitemap.xml\n",
+        encoding="utf-8",
+    )
+
 
 if __name__ == "__main__":
     build()
